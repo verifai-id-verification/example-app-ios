@@ -69,15 +69,22 @@ class MainViewController: UIViewController {
         // Get the URL for the local model package
         let url = Bundle.main.url(forResource: "Set_9_CoreML", withExtension: "package")
         // Load local model
-        let responseBlock = Verifai.setNeuralModel(modelPath: url!)
+        let responseBlock = Verifai.setDocumentClassifierNeuralModel(modelPath: url!)
         // Pass the new responseBlock to our handler
         handleLoadModelsResponseBlock(responseBlock)
     }
     
     // Load online models, these will get downloaded
     private func loadOnlineModels() {
+        loadOnlineOcrModels()
         // Start downloading the neural models
-        let responseBlock = Verifai.downloadNeuralModels(for: ["NL"])
+        let responseBlock = Verifai.downloadDocumentClassifierNeuralModels(for: ["NL"])
+        // Pass the new responseBlock to our handler
+        handleLoadModelsResponseBlock(responseBlock)
+    }
+    
+    private func loadOnlineOcrModels() {
+        let responseBlock = Verifai.downloadOCRMRZNeuralModels()
         // Pass the new responseBlock to our handler
         handleLoadModelsResponseBlock(responseBlock)
     }
@@ -175,6 +182,10 @@ class MainViewController: UIViewController {
         pushVerifaiController(scanMode: .manual)
     }
 
+    @IBAction func handleDownloadOcrNeuralModels(_ sender: UIButton) {
+        loadOnlineOcrModels()
+    }
+    
     @IBAction func handleDownloadNeuralModels(_ sender: UIButton) {
         loadOnlineModels()
     }
