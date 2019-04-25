@@ -36,10 +36,10 @@ class DocumentDetailsTableViewController: UITableViewController {
         countryCodeLabel.text = document?.mrzModel?.countryCode
         lastNameLabel.text = document?.mrzModel?.lastName
         firstNameLabel.text = document?.mrzModel?.firstName
-        sexLabel.text = document?.mrzModel?.gender
+        sexLabel.text = document?.mrzModel?.sex
         nationalityLabel.text = document?.mrzModel?.nationality
         dateOfBirthLabel.text = document?.mrzModel?.dateOfBirth?.mediumFormattedString
-        personalNumberLabel.text = document?.mrzModel?.personalNumber
+        personalNumberLabel.text = document?.mrzModel?.optionalDataStringOne
         documentNumberLabel.text = document?.mrzModel?.documentNumber
         expirationDateLabel.text = document?.mrzModel?.dateOfExpiry?.mediumFormattedString
     }
