@@ -3,18 +3,17 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 51;
 	objects = {
 
 /* Begin PBXBuildFile section */
-		D1075F8520F4B507001EC172 /* Set_9_CoreML.package in Resources */ = {isa = PBXBuildFile; fileRef = D1075F8420F4B4F3001EC172 /* Set_9_CoreML.package */; };
 		D1BAECBF20E290B600066AF7 /* DocumentDetailsTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1BAECBE20E290B600066AF7 /* DocumentDetailsTableViewController.swift */; };
 		D1BC28A820E2637F003C29DE /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1BC28A720E2637F003C29DE /* AppDelegate.swift */; };
 		D1BC28AA20E2637F003C29DE /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1BC28A920E2637F003C29DE /* MainViewController.swift */; };
 		D1BC28AD20E2637F003C29DE /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D1BC28AB20E2637F003C29DE /* Main.storyboard */; };
 		D1BC28AF20E26380003C29DE /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D1BC28AE20E26380003C29DE /* Assets.xcassets */; };
 		D1BC28B220E26380003C29DE /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D1BC28B020E26380003C29DE /* LaunchScreen.storyboard */; };
-		D1BC28BB20E2690F003C29DE /* licencefile.txt in Resources */ = {isa = PBXBuildFile; fileRef = D1BC28BA20E2690F003C29DE /* licencefile.txt */; };
+		E3A19FA322F8538E00E8B318 /* licencefile.txt in Resources */ = {isa = PBXBuildFile; fileRef = E3A19FA222F8538E00E8B318 /* licencefile.txt */; };
 		FC199C2009B31D6D7D4EE612 /* Pods_verifai_example.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 94C80E3C73C1E6B1CEF29413 /* Pods_verifai_example.framework */; };
 /* End PBXBuildFile section */
 
@@ -35,7 +34,6 @@
 		49FA9F0CE535BBD61D7E2A77 /* Pods-verifai-example.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-verifai-example.debug.xcconfig"; path = "Pods/Target Support Files/Pods-verifai-example/Pods-verifai-example.debug.xcconfig"; sourceTree = "<group>"; };
 		94C80E3C73C1E6B1CEF29413 /* Pods_verifai_example.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_verifai_example.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		C0FDF703DA9F6671D2B8104A /* Pods-verifai-example.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-verifai-example.release.xcconfig"; path = "Pods/Target Support Files/Pods-verifai-example/Pods-verifai-example.release.xcconfig"; sourceTree = "<group>"; };
-		D1075F8420F4B4F3001EC172 /* Set_9_CoreML.package */ = {isa = PBXFileReference; lastKnownFileType = file; path = Set_9_CoreML.package; sourceTree = "<group>"; };
 		D1BAECBE20E290B600066AF7 /* DocumentDetailsTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DocumentDetailsTableViewController.swift; sourceTree = "<group>"; };
 		D1BC28A420E2637F003C29DE /* verifai-example.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "verifai-example.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		D1BC28A720E2637F003C29DE /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -44,7 +42,7 @@
 		D1BC28AE20E26380003C29DE /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		D1BC28B120E26380003C29DE /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		D1BC28B320E26380003C29DE /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		D1BC28BA20E2690F003C29DE /* licencefile.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = licencefile.txt; sourceTree = "<group>"; };
+		E3A19FA222F8538E00E8B318 /* licencefile.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; name = licencefile.txt; path = "verifai-example/licencefile.txt"; sourceTree = SOURCE_ROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -112,8 +110,7 @@
 		D1BC28B920E268C3003C29DE /* Resources */ = {
 			isa = PBXGroup;
 			children = (
-				D1075F8420F4B4F3001EC172 /* Set_9_CoreML.package */,
-				D1BC28BA20E2690F003C29DE /* licencefile.txt */,
+				E3A19FA222F8538E00E8B318 /* licencefile.txt */,
 			);
 			path = Resources;
 			sourceTree = "<group>";
@@ -179,8 +176,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				D1075F8520F4B507001EC172 /* Set_9_CoreML.package in Resources */,
-				D1BC28BB20E2690F003C29DE /* licencefile.txt in Resources */,
+				E3A19FA322F8538E00E8B318 /* licencefile.txt in Resources */,
 				D1BC28B220E26380003C29DE /* LaunchScreen.storyboard in Resources */,
 				D1BC28AF20E26380003C29DE /* Assets.xcassets in Resources */,
 				D1BC28AD20E2637F003C29DE /* Main.storyboard in Resources */,
@@ -213,25 +209,16 @@
 			buildActionMask = 2147483647;
 			files = (
 			);
-			inputPaths = (
-				"${SRCROOT}/Pods/Target Support Files/Pods-verifai-example/Pods-verifai-example-frameworks.sh",
-				"${PODS_ROOT}/Verifai/Verifai/Verifai.framework",
-				"${PODS_ROOT}/Verifai/Verifai/Alamofire.framework",
-				"${PODS_ROOT}/Verifai/Verifai/TesseractOCR.framework",
-				"${PODS_ROOT}/Verifai/Verifai/ZIPFoundation.framework",
-				"${PODS_ROOT}/Verifai/Verifai/Sentry.framework",
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-verifai-example/Pods-verifai-example-frameworks-${CONFIGURATION}-input-files.xcfilelist",
 			);
 			name = "[CP] Embed Pods Frameworks";
-			outputPaths = (
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Verifai.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Alamofire.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/TesseractOCR.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/ZIPFoundation.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Sentry.framework",
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-verifai-example/Pods-verifai-example-frameworks-${CONFIGURATION}-output-files.xcfilelist",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-verifai-example/Pods-verifai-example-frameworks.sh\"\n";
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-verifai-example/Pods-verifai-example-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 /* End PBXShellScriptBuildPhase section */
