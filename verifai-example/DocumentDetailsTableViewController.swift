@@ -8,12 +8,12 @@
 
 import UIKit
 import Verifai
+import VerifaiCommons
 
 class DocumentDetailsTableViewController: UITableViewController {
     
     // Cell details
     @IBOutlet weak var documentTypeLabel: UILabel!
-    @IBOutlet weak var issuingCountryLabel: UILabel!
     @IBOutlet weak var countryCodeLabel: UILabel!
     @IBOutlet weak var lastNameLabel: UILabel!
     @IBOutlet weak var firstNameLabel: UILabel!
@@ -25,23 +25,22 @@ class DocumentDetailsTableViewController: UITableViewController {
     @IBOutlet weak var expirationDateLabel: UILabel!
     
     /// The document being shown
-    var document: VerifaiResponse?
+    var result: VerifaiResult?
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
         // Assign all data that was detected to the text fields
-        documentTypeLabel.text = document?.documentType!.rawValue
-        issuingCountryLabel.text = document?.issuingCountryString
-        countryCodeLabel.text = document?.mrzModel?.countryCode
-        lastNameLabel.text = document?.mrzModel?.lastName
-        firstNameLabel.text = document?.mrzModel?.firstName
-        sexLabel.text = document?.mrzModel?.sex
-        nationalityLabel.text = document?.mrzModel?.nationality
-        dateOfBirthLabel.text = document?.mrzModel?.dateOfBirth?.mediumFormattedString
-        personalNumberLabel.text = document?.mrzModel?.optionalDataStringOne
-        documentNumberLabel.text = document?.mrzModel?.documentNumber
-        expirationDateLabel.text = document?.mrzModel?.dateOfExpiry?.mediumFormattedString
+        documentTypeLabel.text = result?.idModel?.type
+        countryCodeLabel.text = result?.mrzModel?.countryCode
+        lastNameLabel.text = result?.mrzModel?.surname
+        firstNameLabel.text = result?.mrzModel?.givenNames
+        sexLabel.text = result?.mrzModel?.sex
+        nationalityLabel.text = result?.mrzModel?.nationality
+        dateOfBirthLabel.text = result?.mrzModel?.parsedDateOfBirth?.mediumFormattedString
+        personalNumberLabel.text = result?.mrzModel?.optionalData
+        documentNumberLabel.text = result?.mrzModel?.documentNumber
+        expirationDateLabel.text = result?.mrzModel?.parsedDateOfExpiry?.mediumFormattedString
     }
 }
 
