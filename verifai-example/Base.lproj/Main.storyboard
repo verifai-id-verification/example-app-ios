@@ -113,15 +113,12 @@
                                 <rect key="frame" x="80" y="48" width="215" height="127"/>
                             </imageView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="View results or perform other available checks" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xEB-9n-NsC">
-                                <rect key="frame" x="8" y="183" width="359" height="80"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="80" id="f6i-tN-U91"/>
-                                </constraints>
+                                <rect key="frame" x="8" y="183" width="359" height="20.5"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="IoL-fG-ddg">
-                                <rect key="frame" x="16" y="271" width="343" height="60"/>
+                                <rect key="frame" x="16" y="211.5" width="343" height="60"/>
                                 <color key="backgroundColor" red="1" green="0.3411764706" blue="0.42352941179999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="60" id="smm-yQ-n8J"/>
@@ -140,13 +137,16 @@
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="yMj-To-hnz">
-                                <rect key="frame" x="16" y="339" width="343" height="60"/>
+                                <rect key="frame" x="16" y="279.5" width="343" height="60"/>
                                 <color key="backgroundColor" red="1" green="0.3411764706" blue="0.42352941179999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="60" id="o5o-Nk-PFi"/>
                                 </constraints>
                                 <state key="normal" title="NFC scan">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                                <state key="disabled">
+                                    <color key="titleColor" systemColor="secondaryLabelColor" red="0.23529411764705882" green="0.23529411764705882" blue="0.2627450980392157" alpha="0.59999999999999998" colorSpace="custom" customColorSpace="sRGB"/>
                                 </state>
                                 <userDefinedRuntimeAttributes>
                                     <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
@@ -155,10 +155,11 @@
                                 </userDefinedRuntimeAttributes>
                                 <connections>
                                     <action selector="handleAutomaticScan:" destination="BYZ-38-t0r" eventType="touchUpInside" id="IdY-sK-sq0"/>
+                                    <action selector="handleNFCScanButton" destination="5n4-yn-F6R" eventType="touchUpInside" id="66h-9z-UNK"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="jvV-lW-kjR">
-                                <rect key="frame" x="16" y="407" width="343" height="60"/>
+                                <rect key="frame" x="16" y="347.5" width="343" height="60"/>
                                 <color key="backgroundColor" red="1" green="0.3411764706" blue="0.42352941179999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="60" id="cmC-Dg-M5x"/>
@@ -173,10 +174,11 @@
                                 </userDefinedRuntimeAttributes>
                                 <connections>
                                     <action selector="handleAutomaticScan:" destination="BYZ-38-t0r" eventType="touchUpInside" id="44u-hX-WYk"/>
+                                    <action selector="handleLivenessCheckButton" destination="5n4-yn-F6R" eventType="touchUpInside" id="VtH-5N-4ij"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="8kU-43-Uqg">
-                                <rect key="frame" x="16" y="475" width="343" height="60"/>
+                                <rect key="frame" x="16" y="415.5" width="343" height="60"/>
                                 <color key="backgroundColor" red="1" green="0.3411764706" blue="0.42352941179999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="60" id="UR8-lb-gAc"/>
@@ -191,15 +193,16 @@
                                 </userDefinedRuntimeAttributes>
                                 <connections>
                                     <action selector="handleAutomaticScan:" destination="BYZ-38-t0r" eventType="touchUpInside" id="5fL-9o-N1G"/>
+                                    <action selector="handleManualDataCrosscheckButton" destination="5n4-yn-F6R" eventType="touchUpInside" id="BWp-WG-mRe"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="0CZ-Su-FOc">
-                                <rect key="frame" x="16" y="543" width="343" height="60"/>
+                                <rect key="frame" x="16" y="483.5" width="343" height="60"/>
                                 <color key="backgroundColor" red="1" green="0.3411764706" blue="0.42352941179999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="60" id="Naw-Dc-4Ee"/>
                                 </constraints>
-                                <state key="normal" title="Manual data crosscheck">
+                                <state key="normal" title="Manual security feature check">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </state>
                                 <userDefinedRuntimeAttributes>
@@ -209,6 +212,7 @@
                                 </userDefinedRuntimeAttributes>
                                 <connections>
                                     <action selector="handleAutomaticScan:" destination="BYZ-38-t0r" eventType="touchUpInside" id="gE3-zm-Zul"/>
+                                    <action selector="handleManualSecurityFeatureButton" destination="5n4-yn-F6R" eventType="touchUpInside" id="eYy-1j-5K0"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -244,6 +248,9 @@
                         <viewLayoutGuide key="safeArea" id="HUg-p3-b8P"/>
                     </view>
                     <navigationItem key="navigationItem" id="zcj-8U-nJu"/>
+                    <connections>
+                        <outlet property="nfcButton" destination="yMj-To-hnz" id="ZM8-Yn-f2M"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="tuT-6N-Khz" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
