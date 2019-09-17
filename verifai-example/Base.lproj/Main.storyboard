@@ -132,8 +132,7 @@
                                     </userDefinedRuntimeAttribute>
                                 </userDefinedRuntimeAttributes>
                                 <connections>
-                                    <action selector="handleAutomaticScan:" destination="BYZ-38-t0r" eventType="touchUpInside" id="oEf-ie-sGk"/>
-                                    <action selector="handleShowScanResults" destination="5n4-yn-F6R" eventType="touchUpInside" id="Koy-T0-y4J"/>
+                                    <action selector="handleShowScanResults" destination="5n4-yn-F6R" eventType="touchUpInside" id="4Xg-TF-qDt"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="yMj-To-hnz">
@@ -146,7 +145,7 @@
                                     <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </state>
                                 <state key="disabled">
-                                    <color key="titleColor" systemColor="secondaryLabelColor" red="0.23529411764705882" green="0.23529411764705882" blue="0.2627450980392157" alpha="0.59999999999999998" colorSpace="custom" customColorSpace="sRGB"/>
+                                    <color key="titleColor" systemColor="secondaryLabelColor" red="0.23529411759999999" green="0.23529411759999999" blue="0.26274509800000001" alpha="0.59999999999999998" colorSpace="custom" customColorSpace="sRGB"/>
                                 </state>
                                 <userDefinedRuntimeAttributes>
                                     <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
@@ -154,8 +153,7 @@
                                     </userDefinedRuntimeAttribute>
                                 </userDefinedRuntimeAttributes>
                                 <connections>
-                                    <action selector="handleAutomaticScan:" destination="BYZ-38-t0r" eventType="touchUpInside" id="IdY-sK-sq0"/>
-                                    <action selector="handleNFCScanButton" destination="5n4-yn-F6R" eventType="touchUpInside" id="66h-9z-UNK"/>
+                                    <action selector="handleNFCScanButton" destination="5n4-yn-F6R" eventType="touchUpInside" id="TbV-w7-JYh"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="jvV-lW-kjR">
@@ -173,8 +171,7 @@
                                     </userDefinedRuntimeAttribute>
                                 </userDefinedRuntimeAttributes>
                                 <connections>
-                                    <action selector="handleAutomaticScan:" destination="BYZ-38-t0r" eventType="touchUpInside" id="44u-hX-WYk"/>
-                                    <action selector="handleLivenessCheckButton" destination="5n4-yn-F6R" eventType="touchUpInside" id="VtH-5N-4ij"/>
+                                    <action selector="handleLivenessCheckButton" destination="5n4-yn-F6R" eventType="touchUpInside" id="Hkw-6q-LKy"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="8kU-43-Uqg">
@@ -192,8 +189,7 @@
                                     </userDefinedRuntimeAttribute>
                                 </userDefinedRuntimeAttributes>
                                 <connections>
-                                    <action selector="handleAutomaticScan:" destination="BYZ-38-t0r" eventType="touchUpInside" id="5fL-9o-N1G"/>
-                                    <action selector="handleManualDataCrosscheckButton" destination="5n4-yn-F6R" eventType="touchUpInside" id="BWp-WG-mRe"/>
+                                    <action selector="handleManualDataCrosscheckButton" destination="5n4-yn-F6R" eventType="touchUpInside" id="cbP-OV-83W"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="0CZ-Su-FOc">
@@ -211,8 +207,7 @@
                                     </userDefinedRuntimeAttribute>
                                 </userDefinedRuntimeAttributes>
                                 <connections>
-                                    <action selector="handleAutomaticScan:" destination="BYZ-38-t0r" eventType="touchUpInside" id="gE3-zm-Zul"/>
-                                    <action selector="handleManualSecurityFeatureButton" destination="5n4-yn-F6R" eventType="touchUpInside" id="eYy-1j-5K0"/>
+                                    <action selector="handleManualSecurityFeatureButton" destination="5n4-yn-F6R" eventType="touchUpInside" id="hQn-Vm-wlW"/>
                                 </connections>
                             </button>
                         </subviews>

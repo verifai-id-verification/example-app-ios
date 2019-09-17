@@ -111,6 +111,4 @@ class ChecksViewController: UIViewController {
         destination.result = result
         self.navigationController?.pushViewController(destination, animated: true)
     }
-
-
 }
