@@ -56,9 +56,10 @@ class MainViewController: UIViewController {
                 case .success(let result):
                     // Show the available checks on this device
                     let storyboard = UIStoryboard(name: "Main", bundle: Bundle.main)
-                    let destination = storyboard.instantiateViewController(withIdentifier: "checksOverview") as! ChecksViewController
-                    destination.result = result
-                    self.navigationController?.pushViewController(destination, animated: true)
+                    if let destination = storyboard.instantiateViewController(withIdentifier: "checksOverview") as? ChecksViewController {
+                        destination.result = result
+                        self.navigationController?.pushViewController(destination, animated: true)
+                    }
                 }
             }
         } catch {
