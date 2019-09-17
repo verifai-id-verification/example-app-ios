@@ -19,9 +19,10 @@ class ChecksViewController: UIViewController {
     @IBOutlet var nfcButton: UIButton!
 
     var result: VerifaiResult?
-    var nfcResult: VerifaiNFCResult?
-    var livenessResult: VerifaiLivenessCheckResults?
-    var manualDataCrosscheck: VerifaiManualDataCrosscheckResult?
+    private var nfcResult: VerifaiNFCResult?
+    private var livenessResult: VerifaiLivenessCheckResults?
+    private var manualDataCrosscheck: VerifaiManualDataCrosscheckResult?
+    private var manualSecurityFeatureCheck: VerifaiManualSecurityFeatureCheckResult?
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -55,7 +56,6 @@ class ChecksViewController: UIViewController {
                 case .failure(let error):
                     print("Error: \(error)")
                 case .success(let nfcResult):
-                    // Set result
                     self.nfcResult = nfcResult
                 }
             }
@@ -105,10 +105,24 @@ class ChecksViewController: UIViewController {
     }
     
     @IBAction func handleManualSecurityFeatureButton() {
-        // Push the result to the DocumentDetailsTableViewController
-        let storyboard = UIStoryboard(name: "Main", bundle: Bundle.main)
-        let destination = storyboard.instantiateViewController(withIdentifier: "documentDetails") as! DocumentDetailsTableViewController
-        destination.result = result
-        self.navigationController?.pushViewController(destination, animated: true)
+        // Guarantee we have a result
+        guard let result = result else {
+            return
+        }
+        // Start the Manual security feature check component
+        do {
+            try VerifaiManualSecurityFeatureCheck.start(over: self,
+                                                        documentData: result) { msfcResult in
+                switch msfcResult {
+                case .failure(let error):
+                    print("Error: \(error)")
+                case .success(let checkResult):
+                    // Set result
+                    self.manualSecurityFeatureCheck = checkResult
+                }
+            }
+        } catch {
+            print("🚫 Licence error: \(error)")
+        }
     }
 }
