@@ -14,6 +14,7 @@
 		D1BC28AF20E26380003C29DE /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D1BC28AE20E26380003C29DE /* Assets.xcassets */; };
 		D1BC28B220E26380003C29DE /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D1BC28B020E26380003C29DE /* LaunchScreen.storyboard */; };
 		E3A19FA322F8538E00E8B318 /* licencefile.txt in Resources */ = {isa = PBXBuildFile; fileRef = E3A19FA222F8538E00E8B318 /* licencefile.txt */; };
+		E3B7B7752330E0B200C07574 /* ChecksViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E3B7B7742330E0B200C07574 /* ChecksViewController.swift */; };
 		FC199C2009B31D6D7D4EE612 /* Pods_verifai_example.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 94C80E3C73C1E6B1CEF29413 /* Pods_verifai_example.framework */; };
 /* End PBXBuildFile section */
 
@@ -43,6 +44,7 @@
 		D1BC28B120E26380003C29DE /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		D1BC28B320E26380003C29DE /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		E3A19FA222F8538E00E8B318 /* licencefile.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; name = licencefile.txt; path = "verifai-example/Resources/licencefile.txt"; sourceTree = SOURCE_ROOT; };
+		E3B7B7742330E0B200C07574 /* ChecksViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChecksViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -97,6 +99,7 @@
 			children = (
 				D1BC28B920E268C3003C29DE /* Resources */,
 				D1BC28A720E2637F003C29DE /* AppDelegate.swift */,
+				E3B7B7742330E0B200C07574 /* ChecksViewController.swift */,
 				D1BC28A920E2637F003C29DE /* MainViewController.swift */,
 				D1BAECBE20E290B600066AF7 /* DocumentDetailsTableViewController.swift */,
 				D1BC28AB20E2637F003C29DE /* Main.storyboard */,
@@ -229,6 +232,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				D1BC28AA20E2637F003C29DE /* MainViewController.swift in Sources */,
+				E3B7B7752330E0B200C07574 /* ChecksViewController.swift in Sources */,
 				D1BAECBF20E290B600066AF7 /* DocumentDetailsTableViewController.swift in Sources */,
 				D1BC28A820E2637F003C29DE /* AppDelegate.swift in Sources */,
 			);
