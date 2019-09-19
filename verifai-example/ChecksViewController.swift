@@ -19,10 +19,7 @@ class ChecksViewController: UIViewController {
     @IBOutlet var nfcButton: UIButton!
 
     var result: VerifaiResult?
-    private var nfcResult: VerifaiNFCResult?
-    private var livenessResult: VerifaiLivenessCheckResults?
-    private var manualDataCrosscheck: VerifaiManualDataCrosscheckResult?
-    private var manualSecurityFeatureCheck: VerifaiManualSecurityFeatureCheckResult?
+    var nfcImage: UIImage?
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -56,7 +53,10 @@ class ChecksViewController: UIViewController {
                 case .failure(let error):
                     print("Error: \(error)")
                 case .success(let nfcResult):
-                    self.nfcResult = nfcResult
+                    // Set the image if retrieved
+                    self.nfcImage = nfcResult.photo
+                    // Show some data with an alert
+                    self.showAlert(msg: "Authenticity: \(nfcResult.authenticity) \nOriginality: \(nfcResult.originality) \nConfidentiality: \(nfcResult.confidentiality)")
                 }
             }
         } catch {
@@ -72,8 +72,8 @@ class ChecksViewController: UIViewController {
                 case .failure(let error):
                 print("Error: \(error)")
                 case .success(let livenessResult):
-                    // Set the result
-                    self.livenessResult = livenessResult
+                    // Show result
+                    self.showAlert(msg: "All checks success or undetermined?\n\(livenessResult.automaticChecksPassed)")
                 }
             }
         } catch {
@@ -90,11 +90,12 @@ class ChecksViewController: UIViewController {
         do {
             try VerifaiManualDataCrosscheck.start(over: self,
                                                   documentData: result,
-                                                  nfcImage: nfcResult?.photo) { manualDataCrosscheckScanResult  in
+                                                  nfcImage: nfcImage) { manualDataCrosscheckScanResult  in
                                                     // Handle result
                                                     switch manualDataCrosscheckScanResult {
                                                     case .success(let checkResult):
-                                                        self.manualDataCrosscheck = checkResult
+                                                        // Show result
+                                                        self.showAlert(msg: "All checks passed?\n\(checkResult.passedAll)")
                                                     case .failure(let error):
                                                         print("Error: \(error)")
                                                     }
@@ -117,12 +118,24 @@ class ChecksViewController: UIViewController {
                 case .failure(let error):
                     print("Error: \(error)")
                 case .success(let checkResult):
-                    // Set result
-                    self.manualSecurityFeatureCheck = checkResult
+                    // Show result
+                    self.showAlert(msg: "Check passed?\n\(checkResult.passed)")
                 }
             }
         } catch {
             print("🚫 Licence error: \(error)")
+        }
+    }
+    
+    /// Show an alert message with a response
+    /// - Parameter msg: The message to show inside of the alert message
+    private func showAlert(msg: String) {
+        let alert = UIAlertController(title: "Process completed",
+                                      message: msg,
+                                      preferredStyle: .alert)
+        alert.addAction(UIAlertAction(title: "Ok", style: .default, handler: nil))
+        DispatchQueue.main.asyncAfter(deadline: .now() + .milliseconds(500)) {
+            self.present(alert, animated: true, completion: nil)
         }
     }
 }
