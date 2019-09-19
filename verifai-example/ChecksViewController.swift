@@ -38,7 +38,7 @@ class ChecksViewController: UIViewController {
         let storyboard = UIStoryboard(name: "Main", bundle: Bundle.main)
         let destination = storyboard.instantiateViewController(withIdentifier: "documentDetails") as! DocumentDetailsTableViewController
         destination.result = result
-        self.navigationController?.pushViewController(destination, animated: true)
+        navigationController?.pushViewController(destination, animated: true)
     }
     
     @IBAction func handleNFCScanButton() {
@@ -68,8 +68,8 @@ class ChecksViewController: UIViewController {
         // Start the VerifaiLiveness component
         do {
             let outputDirectory = FileManager.default.temporaryDirectory.appendingPathComponent("VerifaiLiveness/")
-            try? FileManager.default.removeItem(at: outputDirectory)
-            try? FileManager.default.createDirectory(at: outputDirectory, withIntermediateDirectories: true, attributes: nil)
+            try FileManager.default.removeItem(at: outputDirectory)
+            try FileManager.default.createDirectory(at: outputDirectory, withIntermediateDirectories: true, attributes: nil)
             let preferredLanguage = Locale.preferredLanguages.first ?? "en-US"
             let locale = Locale(identifier: preferredLanguage)
             try VerifaiLiveness.start(over: self, requirements: VerifaiLiveness.defaultRequirements(for: locale), videoLocation: outputDirectory) { (livenessScanResult) in
