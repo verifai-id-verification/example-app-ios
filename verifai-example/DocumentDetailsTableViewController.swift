@@ -13,16 +13,16 @@ import VerifaiCommons
 class DocumentDetailsTableViewController: UITableViewController {
     
     // Cell details
-    @IBOutlet weak var documentTypeLabel: UILabel!
-    @IBOutlet weak var countryCodeLabel: UILabel!
-    @IBOutlet weak var lastNameLabel: UILabel!
-    @IBOutlet weak var firstNameLabel: UILabel!
-    @IBOutlet weak var sexLabel: UILabel!
-    @IBOutlet weak var nationalityLabel: UILabel!
-    @IBOutlet weak var dateOfBirthLabel: UILabel!
-    @IBOutlet weak var personalNumberLabel: UILabel!
-    @IBOutlet weak var documentNumberLabel: UILabel!
-    @IBOutlet weak var expirationDateLabel: UILabel!
+    @IBOutlet var documentTypeLabel: UILabel!
+    @IBOutlet var countryCodeLabel: UILabel!
+    @IBOutlet var lastNameLabel: UILabel!
+    @IBOutlet var firstNameLabel: UILabel!
+    @IBOutlet var sexLabel: UILabel!
+    @IBOutlet var nationalityLabel: UILabel!
+    @IBOutlet var dateOfBirthLabel: UILabel!
+    @IBOutlet var personalNumberLabel: UILabel!
+    @IBOutlet var documentNumberLabel: UILabel!
+    @IBOutlet var expirationDateLabel: UILabel!
     
     /// The document being shown
     var result: VerifaiResult?
@@ -32,15 +32,15 @@ class DocumentDetailsTableViewController: UITableViewController {
         
         // Assign all data that was detected to the text fields
         documentTypeLabel.text = result?.idModel?.type
-        countryCodeLabel.text = result?.mrzModel?.countryCode
-        lastNameLabel.text = result?.mrzModel?.surname
-        firstNameLabel.text = result?.mrzModel?.givenNames
-        sexLabel.text = result?.mrzModel?.sex
-        nationalityLabel.text = result?.mrzModel?.nationality
-        dateOfBirthLabel.text = result?.mrzModel?.parsedDateOfBirth?.mediumFormattedString
-        personalNumberLabel.text = result?.mrzModel?.optionalData
-        documentNumberLabel.text = result?.mrzModel?.documentNumber
-        expirationDateLabel.text = result?.mrzModel?.parsedDateOfExpiry?.mediumFormattedString
+        countryCodeLabel.text = result?.mrzData?.countryCode
+        lastNameLabel.text = result?.mrzData?.surname
+        firstNameLabel.text = result?.mrzData?.givenNames
+        sexLabel.text = result?.mrzData?.sex
+        nationalityLabel.text = result?.mrzData?.nationality
+        dateOfBirthLabel.text = result?.mrzData?.parsedDateOfBirth?.mediumFormattedString
+        personalNumberLabel.text = result?.mrzData?.optionalData
+        documentNumberLabel.text = result?.mrzData?.documentNumber
+        expirationDateLabel.text = result?.mrzData?.parsedDateOfExpiry?.mediumFormattedString
     }
 }
 

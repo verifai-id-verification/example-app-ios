@@ -54,11 +54,12 @@ class MainViewController: UIViewController {
                 case .failure(let error):
                     print("Error: \(error)")
                 case .success(let result):
-                    // Push the result to the DocumentDetailsTableViewController
+                    // Show the available checks on this device
                     let storyboard = UIStoryboard(name: "Main", bundle: Bundle.main)
-                    let destination = storyboard.instantiateViewController(withIdentifier: "documentDetails") as! DocumentDetailsTableViewController
-                    destination.result = result
-                    self.navigationController?.pushViewController(destination, animated: true)
+                    if let destination = storyboard.instantiateViewController(withIdentifier: "checksOverview") as? ChecksViewController {
+                        destination.result = result
+                        self.navigationController?.pushViewController(destination, animated: true)
+                    }
                 }
             }
         } catch {
