@@ -67,13 +67,18 @@ class ChecksViewController: UIViewController {
     @IBAction func handleLivenessCheckButton() {
         // Start the VerifaiLiveness component
         do {
-            try VerifaiLiveness.start(over: self) { (livenessScanResult) in
+            let outputDirectory = FileManager.default.temporaryDirectory.appendingPathComponent("VerifaiLiveness/")
+            try? FileManager.default.removeItem(at: outputDirectory)
+            try? FileManager.default.createDirectory(at: outputDirectory, withIntermediateDirectories: true, attributes: nil)
+            let preferredLanguage = Locale.preferredLanguages.first ?? "en-US"
+            let locale = Locale(identifier: preferredLanguage)
+            try VerifaiLiveness.start(over: self, requirements: VerifaiLiveness.defaultRequirements(for: locale), videoLocation: outputDirectory) { (livenessScanResult) in
                 switch livenessScanResult {
                 case .failure(let error):
                 print("Error: \(error)")
                 case .success(let livenessResult):
                     // Show result
-                    self.showAlert(msg: "All checks success or undetermined?\n\(livenessResult.automaticChecksPassed)")
+                    self.showAlert(msg: "All checks done?\n\n\(livenessResult.automaticChecksPassed)")
                 }
             }
         } catch {
@@ -95,7 +100,7 @@ class ChecksViewController: UIViewController {
                                                     switch manualDataCrosscheckScanResult {
                                                     case .success(let checkResult):
                                                         // Show result
-                                                        self.showAlert(msg: "All checks passed?\n\(checkResult.passedAll)")
+                                                        self.showAlert(msg: "All checks passed?\n\n\(checkResult.passedAll)")
                                                     case .failure(let error):
                                                         print("Error: \(error)")
                                                     }
@@ -119,7 +124,7 @@ class ChecksViewController: UIViewController {
                     print("Error: \(error)")
                 case .success(let checkResult):
                     // Show result
-                    self.showAlert(msg: "Check passed?\n\(checkResult.passed)")
+                    self.showAlert(msg: "Check passed?\n\n\(checkResult.passed)")
                 }
             }
         } catch {
