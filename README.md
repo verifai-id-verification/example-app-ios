@@ -12,4 +12,4 @@ In order to install the example you will need the following:
 - Create a new file in `verifai-example/Resources/licencefile.txt` in which you put the licence you obtained.
 - Build and install app.
 
-More information: https://docs.verifai.com/mobile-sdk/ios-sdk-latest.html#verifai-ios-sdk-v-3-2-0
+More information: https://docs.verifai.com/mobile-sdk/ios-sdk-latest.html
