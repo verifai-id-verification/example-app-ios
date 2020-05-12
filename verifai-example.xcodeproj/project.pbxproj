@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		93AFD2A597FB5EFC150BBB91 /* Pods_verifai_example.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 78E25FAB8A7DD768A50F0E56 /* Pods_verifai_example.framework */; };
 		D1BAECBF20E290B600066AF7 /* DocumentDetailsTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1BAECBE20E290B600066AF7 /* DocumentDetailsTableViewController.swift */; };
 		D1BC28A820E2637F003C29DE /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1BC28A720E2637F003C29DE /* AppDelegate.swift */; };
 		D1BC28AA20E2637F003C29DE /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1BC28A920E2637F003C29DE /* MainViewController.swift */; };
@@ -15,7 +16,6 @@
 		D1BC28B220E26380003C29DE /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D1BC28B020E26380003C29DE /* LaunchScreen.storyboard */; };
 		E3A19FA322F8538E00E8B318 /* licencefile.txt in Resources */ = {isa = PBXBuildFile; fileRef = E3A19FA222F8538E00E8B318 /* licencefile.txt */; };
 		E3B7B7782331178600C07574 /* ChecksViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E3B7B7742330E0B200C07574 /* ChecksViewController.swift */; };
-		FC199C2009B31D6D7D4EE612 /* Pods_verifai_example.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 94C80E3C73C1E6B1CEF29413 /* Pods_verifai_example.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -32,9 +32,9 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
-		49FA9F0CE535BBD61D7E2A77 /* Pods-verifai-example.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-verifai-example.debug.xcconfig"; path = "Pods/Target Support Files/Pods-verifai-example/Pods-verifai-example.debug.xcconfig"; sourceTree = "<group>"; };
-		94C80E3C73C1E6B1CEF29413 /* Pods_verifai_example.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_verifai_example.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		C0FDF703DA9F6671D2B8104A /* Pods-verifai-example.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-verifai-example.release.xcconfig"; path = "Pods/Target Support Files/Pods-verifai-example/Pods-verifai-example.release.xcconfig"; sourceTree = "<group>"; };
+		2D3FE8BA75AF8B8634B328B0 /* Pods-verifai-example.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-verifai-example.debug.xcconfig"; path = "Target Support Files/Pods-verifai-example/Pods-verifai-example.debug.xcconfig"; sourceTree = "<group>"; };
+		78E25FAB8A7DD768A50F0E56 /* Pods_verifai_example.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_verifai_example.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		A3EF5D441383C24BCDAF5E67 /* Pods-verifai-example.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-verifai-example.release.xcconfig"; path = "Target Support Files/Pods-verifai-example/Pods-verifai-example.release.xcconfig"; sourceTree = "<group>"; };
 		D1BAECBE20E290B600066AF7 /* DocumentDetailsTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DocumentDetailsTableViewController.swift; sourceTree = "<group>"; };
 		D1BC28A420E2637F003C29DE /* verifai-example.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "verifai-example.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		D1BC28A720E2637F003C29DE /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -53,28 +53,21 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				FC199C2009B31D6D7D4EE612 /* Pods_verifai_example.framework in Frameworks */,
+				93AFD2A597FB5EFC150BBB91 /* Pods_verifai_example.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		9D21A3AB2CA258FD72526689 /* Pods */ = {
+		6E9A4F9D97F6B47416443A62 /* Pods */ = {
 			isa = PBXGroup;
 			children = (
-				49FA9F0CE535BBD61D7E2A77 /* Pods-verifai-example.debug.xcconfig */,
-				C0FDF703DA9F6671D2B8104A /* Pods-verifai-example.release.xcconfig */,
+				2D3FE8BA75AF8B8634B328B0 /* Pods-verifai-example.debug.xcconfig */,
+				A3EF5D441383C24BCDAF5E67 /* Pods-verifai-example.release.xcconfig */,
 			);
 			name = Pods;
-			sourceTree = "<group>";
-		};
-		CBF00CEBA656E5B38FFFD77B /* Frameworks */ = {
-			isa = PBXGroup;
-			children = (
-				94C80E3C73C1E6B1CEF29413 /* Pods_verifai_example.framework */,
-			);
-			name = Frameworks;
+			path = Pods;
 			sourceTree = "<group>";
 		};
 		D1BC289B20E2637F003C29DE = {
@@ -82,8 +75,8 @@
 			children = (
 				D1BC28A620E2637F003C29DE /* verifai-example */,
 				D1BC28A520E2637F003C29DE /* Products */,
-				9D21A3AB2CA258FD72526689 /* Pods */,
-				CBF00CEBA656E5B38FFFD77B /* Frameworks */,
+				6E9A4F9D97F6B47416443A62 /* Pods */,
+				FF4BC41C6F024C5974B25A9F /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -120,6 +113,14 @@
 			path = Resources;
 			sourceTree = "<group>";
 		};
+		FF4BC41C6F024C5974B25A9F /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				78E25FAB8A7DD768A50F0E56 /* Pods_verifai_example.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -127,12 +128,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = D1BC28B620E26380003C29DE /* Build configuration list for PBXNativeTarget "verifai-example" */;
 			buildPhases = (
-				8F2774ABA0E7653A766E5938 /* [CP] Check Pods Manifest.lock */,
+				DFF0BF168D76FAB0B06085F2 /* [CP] Check Pods Manifest.lock */,
 				D1BC28A020E2637F003C29DE /* Sources */,
 				D1BC28A120E2637F003C29DE /* Frameworks */,
 				D1BC28A220E2637F003C29DE /* Resources */,
 				D1BAECA220E27E8B00066AF7 /* Embed Frameworks */,
-				E58C287ECBD6F1FDCE53B4F6 /* [CP] Embed Pods Frameworks */,
+				6403D1942A4A86CC2A358DA6 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -192,25 +193,7 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
-		8F2774ABA0E7653A766E5938 /* [CP] Check Pods Manifest.lock */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
-				"${PODS_ROOT}/Manifest.lock",
-			);
-			name = "[CP] Check Pods Manifest.lock";
-			outputPaths = (
-				"$(DERIVED_FILE_DIR)/Pods-verifai-example-checkManifestLockResult.txt",
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
-			showEnvVarsInLog = 0;
-		};
-		E58C287ECBD6F1FDCE53B4F6 /* [CP] Embed Pods Frameworks */ = {
+		6403D1942A4A86CC2A358DA6 /* [CP] Embed Pods Frameworks */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -225,6 +208,28 @@
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
 			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-verifai-example/Pods-verifai-example-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		DFF0BF168D76FAB0B06085F2 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-verifai-example-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
 			showEnvVarsInLog = 0;
 		};
 /* End PBXShellScriptBuildPhase section */
@@ -379,7 +384,7 @@
 		};
 		D1BC28B720E26380003C29DE /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 49FA9F0CE535BBD61D7E2A77 /* Pods-verifai-example.debug.xcconfig */;
+			baseConfigurationReference = 2D3FE8BA75AF8B8634B328B0 /* Pods-verifai-example.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
@@ -403,7 +408,7 @@
 		};
 		D1BC28B820E26380003C29DE /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = C0FDF703DA9F6671D2B8104A /* Pods-verifai-example.release.xcconfig */;
+			baseConfigurationReference = A3EF5D441383C24BCDAF5E67 /* Pods-verifai-example.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
