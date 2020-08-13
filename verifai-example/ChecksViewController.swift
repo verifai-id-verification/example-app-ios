@@ -68,7 +68,9 @@ class ChecksViewController: UIViewController {
         // Start the VerifaiLiveness component
         do {
             let outputDirectory = FileManager.default.temporaryDirectory.appendingPathComponent("VerifaiLiveness/")
-            try FileManager.default.removeItem(at: outputDirectory)
+            if FileManager.default.fileExists(atPath: outputDirectory.path) {
+                try FileManager.default.removeItem(at: outputDirectory)
+            }
             try FileManager.default.createDirectory(at: outputDirectory, withIntermediateDirectories: true, attributes: nil)
             let preferredLanguage = Locale.preferredLanguages.first ?? "en-US"
             let locale = Locale(identifier: preferredLanguage)
