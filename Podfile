@@ -4,9 +4,9 @@ source 'https://github.com/CocoaPods/Specs.git'
 use_frameworks!
 
 target 'verifai-example' do
-    pod 'Verifai', '~> 3.4.3'
-    pod 'VerifaiNFC', '~> 3.4.3'
-    pod 'VerifaiLiveness', '~> 3.4.3'
-    pod 'VerifaiManualDataCrosscheck', '~> 3.4.3'
-    pod 'VerifaiManualSecurityFeatureCheck', '~> 3.4.3'
+    pod 'Verifai', '~> 4.0.0'
+    pod 'VerifaiNFC', '~> 4.0.0'
+    pod 'VerifaiLiveness', '~> 4.0.0'
+    pod 'VerifaiManualDataCrosscheck', '~> 4.0.0'
+    pod 'VerifaiManualSecurityFeatureCheck', '~> 4.0.0'
 end
