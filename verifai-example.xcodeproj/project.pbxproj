@@ -15,6 +15,7 @@
 		D1BC28AF20E26380003C29DE /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D1BC28AE20E26380003C29DE /* Assets.xcassets */; };
 		D1BC28B220E26380003C29DE /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D1BC28B020E26380003C29DE /* LaunchScreen.storyboard */; };
 		E3A19FA322F8538E00E8B318 /* licencefile.txt in Resources */ = {isa = PBXBuildFile; fileRef = E3A19FA222F8538E00E8B318 /* licencefile.txt */; };
+		E3ABEFCB2523337000E24985 /* ScanImagesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E3ABEFCA2523337000E24985 /* ScanImagesViewController.swift */; };
 		E3B7B7782331178600C07574 /* ChecksViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E3B7B7742330E0B200C07574 /* ChecksViewController.swift */; };
 /* End PBXBuildFile section */
 
@@ -44,6 +45,7 @@
 		D1BC28B120E26380003C29DE /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		D1BC28B320E26380003C29DE /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		E3A19FA222F8538E00E8B318 /* licencefile.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; name = licencefile.txt; path = "verifai-example/Resources/licencefile.txt"; sourceTree = SOURCE_ROOT; };
+		E3ABEFCA2523337000E24985 /* ScanImagesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScanImagesViewController.swift; sourceTree = "<group>"; };
 		E3B7B7742330E0B200C07574 /* ChecksViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChecksViewController.swift; sourceTree = "<group>"; };
 		E3B7B7762330FB5800C07574 /* verifai-example.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = "verifai-example.entitlements"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -66,7 +68,6 @@
 				2D3FE8BA75AF8B8634B328B0 /* Pods-verifai-example.debug.xcconfig */,
 				A3EF5D441383C24BCDAF5E67 /* Pods-verifai-example.release.xcconfig */,
 			);
-			name = Pods;
 			path = Pods;
 			sourceTree = "<group>";
 		};
@@ -97,6 +98,7 @@
 				E3B7B7742330E0B200C07574 /* ChecksViewController.swift */,
 				D1BC28A920E2637F003C29DE /* MainViewController.swift */,
 				D1BAECBE20E290B600066AF7 /* DocumentDetailsTableViewController.swift */,
+				E3ABEFCA2523337000E24985 /* ScanImagesViewController.swift */,
 				D1BC28AB20E2637F003C29DE /* Main.storyboard */,
 				D1BC28AE20E26380003C29DE /* Assets.xcassets */,
 				D1BC28B020E26380003C29DE /* LaunchScreen.storyboard */,
@@ -241,6 +243,7 @@
 			files = (
 				D1BC28AA20E2637F003C29DE /* MainViewController.swift in Sources */,
 				E3B7B7782331178600C07574 /* ChecksViewController.swift in Sources */,
+				E3ABEFCB2523337000E24985 /* ScanImagesViewController.swift in Sources */,
 				D1BAECBF20E290B600066AF7 /* DocumentDetailsTableViewController.swift in Sources */,
 				D1BC28A820E2637F003C29DE /* AppDelegate.swift in Sources */,
 			);

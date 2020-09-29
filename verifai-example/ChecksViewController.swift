@@ -41,6 +41,14 @@ class ChecksViewController: UIViewController {
         navigationController?.pushViewController(destination, animated: true)
     }
     
+    @IBAction func handleShowScanImages() {
+        // Push the result to the DocumentDetailsTableViewController
+        let storyboard = UIStoryboard(name: "Main", bundle: Bundle.main)
+        let destination = storyboard.instantiateViewController(withIdentifier: "scanImageResults") as! ScanImagesViewController
+        destination.result = result
+        navigationController?.pushViewController(destination, animated: true)
+    }
+    
     @IBAction func handleNFCScanButton() {
         // Guarantee we have a result
         guard let result = result else {
