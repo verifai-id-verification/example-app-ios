@@ -56,7 +56,10 @@ class ChecksViewController: UIViewController {
         }
         // Start the NFC component
         do {
-            try VerifaiNFC.start(over: self, documentData: result, retrieveImage: true) { nfcScanResult in
+            try VerifaiNFC.start(over: self,
+                                 documentData: result,
+                                 retrieveImage: true,
+                                 instructionScreenConfiguration: nil) { nfcScanResult in
                 switch nfcScanResult {
                 case .failure(let error):
                     print("Error: \(error)")
