@@ -31,7 +31,7 @@ class DocumentDetailsTableViewController: UITableViewController {
         super.viewDidLoad()
         
         // Assign all data that was detected to the text fields
-        documentTypeLabel.text = result?.idModel?.type
+        documentTypeLabel.text = result?.mrzData?.documentType
         countryCodeLabel.text = result?.mrzData?.countryCode
         lastNameLabel.text = result?.mrzData?.surname
         firstNameLabel.text = result?.mrzData?.givenNames

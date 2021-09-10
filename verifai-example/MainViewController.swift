@@ -34,13 +34,29 @@ class MainViewController: UIViewController {
         }
         
         // Start configuring Verifai
-        // We have to pass our bundle identifier along with the license key to activate Verifai
+        // Setup the licence
         switch VerifaiCommons.setLicence(licenceString) {
             case .success(_):
                 print("Successfully configured Verifai")
             case .failure(let error):
                 print("🚫 Licence error: \(error)")
         }
+        // You can customise configuration items like this
+        let configuration = VerifaiConfiguration(enableAutomatic: false,
+                                                 requireDocumentCopy: true,
+                                                 requireCroppedImage: false,
+                                                 enablePostCropping: true,
+                                                 enableManual: true,
+                                                 enableAutoUpdate: true,
+                                                 requireMRZContents: true,
+                                                 readMRZContents: true,
+                                                 requireNFCWhenAvailable: true,
+                                                 validators: [])
+        // Instruction screen configuration
+        configuration.instructionScreenConfiguration =
+            try! VerifaiInstructionScreenConfiguration(showInstructionScreens: true,
+                                                       instructionScreens: [:])
+        try? Verifai.configure(with: configuration)
     }
     
     // MARK: - Verifai interaction
