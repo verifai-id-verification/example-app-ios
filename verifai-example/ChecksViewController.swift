@@ -71,31 +71,46 @@ class ChecksViewController: UIViewController {
                 }
             }
         } catch {
-            print("🚫 Licence error: \(error)")
+            print("🚫 Unhandled error: \(error)")
         }
     }
     
     @IBAction func handleLivenessCheckButton() {
         // Start the VerifaiLiveness component
         do {
+            // Setup the output directory where results will be kept
             let outputDirectory = FileManager.default.temporaryDirectory.appendingPathComponent("VerifaiLiveness/")
             if FileManager.default.fileExists(atPath: outputDirectory.path) {
                 try FileManager.default.removeItem(at: outputDirectory)
             }
             try FileManager.default.createDirectory(at: outputDirectory, withIntermediateDirectories: true, attributes: nil)
+            // Setup the requirement, we'll be using the default ones and add a face matching check
             let preferredLanguage = Locale.preferredLanguages.first ?? "en-US"
             let locale = Locale(identifier: preferredLanguage)
-            try VerifaiLiveness.start(over: self, requirements: VerifaiLiveness.defaultRequirements(for: locale), videoLocation: outputDirectory) { (livenessScanResult) in
+            var requirements = VerifaiLiveness.defaultRequirements(for: locale)
+            // Determine which image to use for the face matching
+            // You could use the front of the document with the face visible on the picture on it
+            // Or if an NFC scanned has been performed we could use that image instead
+            guard let documentImage = nfcImage ?? result?.frontImage else {
+                return
+            }
+            // Add the face matching check
+            let faceMatchingCheck = VerifaiFaceMatchingLivenessCheck(documentImage: documentImage)
+            requirements.append(faceMatchingCheck)
+            // Start the liveness check
+            try VerifaiLiveness.start(over: self,
+                                      requirements: requirements,
+                                      resultOutputDirectory: outputDirectory) { livenessScanResult in
                 switch livenessScanResult {
                 case .failure(let error):
-                print("Error: \(error)")
+                    print("Error: \(error)")
                 case .success(let livenessResult):
                     // Show result
                     self.showAlert(msg: "All checks done?\n\n\(livenessResult.automaticChecksPassed)")
                 }
             }
         } catch {
-            print("🚫 Licence error: \(error)")
+            print("🚫 Unhandled error: \(error)")
         }
     }
     
@@ -141,7 +156,7 @@ class ChecksViewController: UIViewController {
                 }
             }
         } catch {
-            print("🚫 Licence error: \(error)")
+            print("🚫 Unhandled error: \(error)")
         }
     }
     
