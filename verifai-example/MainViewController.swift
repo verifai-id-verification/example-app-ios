@@ -48,7 +48,7 @@ class MainViewController: UIViewController {
                                                  enableManual: true,
                                                  requireMRZContents: false,
                                                  readMRZContents: true,
-                                                 requireNFCWhenAvailable: true,
+                                                 requireNFCWhenAvailable: false,
                                                  validators: [])
         do {
             // Instruction screen configuration
@@ -57,6 +57,8 @@ class MainViewController: UIViewController {
                                                           instructionScreens: [:])
             // Set the configuration in Verifai
             try Verifai.configure(with: configuration)
+        } catch VerifaiConfigurationError.invalidConfiguration(let description) {
+            print("Configuration error: \(description)")
         } catch {
             print("🚫 Unhandled error: \(error.localizedDescription)")
         }

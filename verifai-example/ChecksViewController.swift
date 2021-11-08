@@ -105,6 +105,10 @@ class ChecksViewController: UIViewController {
                 case .success(let livenessResult):
                     // Show result
                     self.showAlert(msg: "All checks done?\n\n\(livenessResult.automaticChecksPassed)")
+                    // Print face matching result if available
+                    if let faceMatchResult = livenessResult.resultList.first(where: { $0 is VerifaiFaceMatchingCheckResult }) as? VerifaiFaceMatchingCheckResult {
+                        print("Face matches: \(faceMatchResult.matches ?? false)")
+                    }
                 }
             }
         } catch {
