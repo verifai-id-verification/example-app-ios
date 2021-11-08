@@ -7,12 +7,10 @@
 //
 
 import UIKit
-import Verifai
-import VerifaiCommons
-import VerifaiNFC
-import VerifaiLiveness
-import VerifaiManualDataCrosscheck
-import VerifaiManualSecurityFeatureCheck
+import VerifaiKit
+import VerifaiCommonsKit
+import VerifaiNFCKit
+import VerifaiLivenessKit
 
 class ChecksViewController: UIViewController {
     
@@ -107,52 +105,10 @@ class ChecksViewController: UIViewController {
                 case .success(let livenessResult):
                     // Show result
                     self.showAlert(msg: "All checks done?\n\n\(livenessResult.automaticChecksPassed)")
-                }
-            }
-        } catch {
-            print("🚫 Unhandled error: \(error)")
-        }
-    }
-    
-    @IBAction func handleManualDataCrosscheckButton() {
-        // Guarantee we have a result
-        guard let result = result else {
-            return
-        }
-        // Start the Manual data crosscheck component
-        do {
-            try VerifaiManualDataCrosscheck.start(over: self,
-                                                  documentData: result,
-                                                  nfcImage: nfcImage) { manualDataCrosscheckScanResult  in
-                                                    // Handle result
-                                                    switch manualDataCrosscheckScanResult {
-                                                    case .success(let checkResult):
-                                                        // Show result
-                                                        self.showAlert(msg: "All checks passed?\n\n\(checkResult.passedAll)")
-                                                    case .failure(let error):
-                                                        print("Error: \(error)")
-                                                    }
-            }
-        } catch {
-            print("🚫 Licence error: \(error)")
-        }
-    }
-    
-    @IBAction func handleManualSecurityFeatureButton() {
-        // Guarantee we have a result
-        guard let result = result else {
-            return
-        }
-        // Start the Manual security feature check component
-        do {
-            try VerifaiManualSecurityFeatureCheck.start(over: self,
-                                                        documentData: result) { msfcResult in
-                switch msfcResult {
-                case .failure(let error):
-                    print("Error: \(error)")
-                case .success(let checkResult):
-                    // Show result
-                    self.showAlert(msg: "Check passed?\n\n\(checkResult.passed)")
+                    // Print face matching result if available
+                    if let faceMatchResult = livenessResult.resultList.first(where: { $0 is VerifaiFaceMatchingCheckResult }) as? VerifaiFaceMatchingCheckResult {
+                        print("Face matches: \(faceMatchResult.matches ?? false)")
+                    }
                 }
             }
         } catch {

@@ -7,8 +7,8 @@
 //
 
 import UIKit
-import Verifai
-import VerifaiCommons
+import VerifaiKit
+import VerifaiCommonsKit
 import AVFoundation
 
 class MainViewController: UIViewController {
@@ -42,21 +42,26 @@ class MainViewController: UIViewController {
                 print("🚫 Licence error: \(error)")
         }
         // You can customise configuration items like this
-        let configuration = VerifaiConfiguration(enableAutomatic: false,
-                                                 requireDocumentCopy: true,
+        let configuration = VerifaiConfiguration(requireDocumentCopy: true,
                                                  requireCroppedImage: false,
                                                  enablePostCropping: true,
                                                  enableManual: true,
-                                                 enableAutoUpdate: true,
-                                                 requireMRZContents: true,
+                                                 requireMRZContents: false,
                                                  readMRZContents: true,
-                                                 requireNFCWhenAvailable: true,
+                                                 requireNFCWhenAvailable: false,
                                                  validators: [])
-        // Instruction screen configuration
-        configuration.instructionScreenConfiguration =
-            try! VerifaiInstructionScreenConfiguration(showInstructionScreens: true,
-                                                       instructionScreens: [:])
-        try? Verifai.configure(with: configuration)
+        do {
+            // Instruction screen configuration
+            configuration.instructionScreenConfiguration =
+                try VerifaiInstructionScreenConfiguration(showInstructionScreens: false,
+                                                          instructionScreens: [:])
+            // Set the configuration in Verifai
+            try Verifai.configure(with: configuration)
+        } catch VerifaiConfigurationError.invalidConfiguration(let description) {
+            print("Configuration error: \(description)")
+        } catch {
+            print("🚫 Unhandled error: \(error.localizedDescription)")
+        }
     }
     
     // MARK: - Verifai interaction
@@ -79,7 +84,7 @@ class MainViewController: UIViewController {
                 }
             }
         } catch {
-            print("🚫 Licence error: \(error)")
+            print("🚫 Unhandled error: \(error)")
         }
     }
     

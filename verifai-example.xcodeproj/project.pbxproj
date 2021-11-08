@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 51;
+	objectVersion = 50;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -19,19 +19,6 @@
 		E3B7B7782331178600C07574 /* ChecksViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E3B7B7742330E0B200C07574 /* ChecksViewController.swift */; };
 /* End PBXBuildFile section */
 
-/* Begin PBXCopyFilesBuildPhase section */
-		D1BAECA220E27E8B00066AF7 /* Embed Frameworks */ = {
-			isa = PBXCopyFilesBuildPhase;
-			buildActionMask = 2147483647;
-			dstPath = "";
-			dstSubfolderSpec = 10;
-			files = (
-			);
-			name = "Embed Frameworks";
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-/* End PBXCopyFilesBuildPhase section */
-
 /* Begin PBXFileReference section */
 		2D3FE8BA75AF8B8634B328B0 /* Pods-verifai-example.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-verifai-example.debug.xcconfig"; path = "Target Support Files/Pods-verifai-example/Pods-verifai-example.debug.xcconfig"; sourceTree = "<group>"; };
 		78E25FAB8A7DD768A50F0E56 /* Pods_verifai_example.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_verifai_example.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -44,10 +31,17 @@
 		D1BC28AE20E26380003C29DE /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		D1BC28B120E26380003C29DE /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		D1BC28B320E26380003C29DE /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		E34500E027187B87007D3C73 /* OpenSSL.xcframework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcframework; path = OpenSSL.xcframework; sourceTree = "<group>"; };
 		E3A19FA222F8538E00E8B318 /* licencefile.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; name = licencefile.txt; path = "verifai-example/Resources/licencefile.txt"; sourceTree = SOURCE_ROOT; };
 		E3ABEFCA2523337000E24985 /* ScanImagesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScanImagesViewController.swift; sourceTree = "<group>"; };
 		E3B7B7742330E0B200C07574 /* ChecksViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChecksViewController.swift; sourceTree = "<group>"; };
 		E3B7B7762330FB5800C07574 /* verifai-example.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = "verifai-example.entitlements"; sourceTree = "<group>"; };
+		E3DD8B7F27198BA100CC660E /* VerifaiNFCKit.xcframework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcframework; name = VerifaiNFCKit.xcframework; path = "verifai-example/VerifaiNFCKit.xcframework"; sourceTree = "<group>"; };
+		E3DD8B8027198BA100CC660E /* VerifaiKit.xcframework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcframework; name = VerifaiKit.xcframework; path = "verifai-example/VerifaiKit.xcframework"; sourceTree = "<group>"; };
+		E3DD8B8127198BA100CC660E /* VerifaiLivenessKit.xcframework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcframework; name = VerifaiLivenessKit.xcframework; path = "verifai-example/VerifaiLivenessKit.xcframework"; sourceTree = "<group>"; };
+		E3DD8B8227198BA100CC660E /* VerifaiCommonsKit.xcframework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcframework; name = VerifaiCommonsKit.xcframework; path = "verifai-example/VerifaiCommonsKit.xcframework"; sourceTree = "<group>"; };
+		E3DD8B9E2719B8C000CC660E /* OpenSSL.xcframework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcframework; name = OpenSSL.xcframework; path = "verifai-example/OpenSSL.xcframework"; sourceTree = "<group>"; };
+		E3DD8BAC2719B97300CC660E /* opencv2.xcframework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcframework; name = opencv2.xcframework; path = "verifai-example/opencv2.xcframework"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -118,6 +112,13 @@
 		FF4BC41C6F024C5974B25A9F /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				E3DD8BAC2719B97300CC660E /* opencv2.xcframework */,
+				E3DD8B9E2719B8C000CC660E /* OpenSSL.xcframework */,
+				E3DD8B8227198BA100CC660E /* VerifaiCommonsKit.xcframework */,
+				E3DD8B8027198BA100CC660E /* VerifaiKit.xcframework */,
+				E3DD8B8127198BA100CC660E /* VerifaiLivenessKit.xcframework */,
+				E3DD8B7F27198BA100CC660E /* VerifaiNFCKit.xcframework */,
+				E34500E027187B87007D3C73 /* OpenSSL.xcframework */,
 				78E25FAB8A7DD768A50F0E56 /* Pods_verifai_example.framework */,
 			);
 			name = Frameworks;
@@ -134,8 +135,7 @@
 				D1BC28A020E2637F003C29DE /* Sources */,
 				D1BC28A120E2637F003C29DE /* Frameworks */,
 				D1BC28A220E2637F003C29DE /* Resources */,
-				D1BAECA220E27E8B00066AF7 /* Embed Frameworks */,
-				6403D1942A4A86CC2A358DA6 /* [CP] Embed Pods Frameworks */,
+				DAEE3B652A3BD3DAE001C8A2 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -153,7 +153,7 @@
 			isa = PBXProject;
 			attributes = {
 				LastSwiftUpdateCheck = 0940;
-				LastUpgradeCheck = 0940;
+				LastUpgradeCheck = 1310;
 				ORGANIZATIONNAME = "Gert-Jan van Ginkel";
 				TargetAttributes = {
 					D1BC28A320E2637F003C29DE = {
@@ -195,7 +195,7 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
-		6403D1942A4A86CC2A358DA6 /* [CP] Embed Pods Frameworks */ = {
+		DAEE3B652A3BD3DAE001C8A2 /* [CP] Embed Pods Frameworks */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -297,6 +297,7 @@
 				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
 				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
 				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
 				CLANG_WARN_STRICT_PROTOTYPES = YES;
 				CLANG_WARN_SUSPICIOUS_MOVE = YES;
@@ -357,6 +358,7 @@
 				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
 				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
 				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
 				CLANG_WARN_STRICT_PROTOTYPES = YES;
 				CLANG_WARN_SUSPICIOUS_MOVE = YES;
@@ -389,11 +391,11 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 2D3FE8BA75AF8B8634B328B0 /* Pods-verifai-example.debug.xcconfig */;
 			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_ENTITLEMENTS = "verifai-example/verifai-example.entitlements";
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_ASSET_PATHS = "";
 				DEVELOPMENT_TEAM = 799N9ZYHX3;
 				INFOPLIST_FILE = "verifai-example/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
@@ -413,11 +415,11 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = A3EF5D441383C24BCDAF5E67 /* Pods-verifai-example.release.xcconfig */;
 			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_ENTITLEMENTS = "verifai-example/verifai-example.entitlements";
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_ASSET_PATHS = "";
 				DEVELOPMENT_TEAM = 799N9ZYHX3;
 				INFOPLIST_FILE = "verifai-example/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 11.0;

@@ -7,8 +7,8 @@
 //
 
 import UIKit
-import Verifai
-import VerifaiCommons
+import VerifaiKit
+import VerifaiCommonsKit
 
 class DocumentDetailsTableViewController: UITableViewController {
     

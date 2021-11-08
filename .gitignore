@@ -132,6 +132,8 @@ verifai-example/Resources/Set_9_CoreML\.package
 # ignore the licence
 verifai-example/Resources/licencefile.txt
 
+#Ignore XCFrameworks
+*.xcframework
 
 Podfile.lock
 
