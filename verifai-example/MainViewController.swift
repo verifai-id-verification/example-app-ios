@@ -55,6 +55,8 @@ class MainViewController: UIViewController {
             configuration.instructionScreenConfiguration =
                 try VerifaiInstructionScreenConfiguration(showInstructionScreens: false,
                                                           instructionScreens: [:])
+            // Enable visual inspection feature 
+            configuration.enableVisualInspection = true
             // Set the configuration in Verifai
             try Verifai.configure(with: configuration)
         } catch VerifaiConfigurationError.invalidConfiguration(let description) {
