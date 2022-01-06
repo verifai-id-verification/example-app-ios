@@ -15,6 +15,7 @@ import VerifaiLivenessKit
 class ChecksViewController: UIViewController {
     
     @IBOutlet var nfcButton: UIButton!
+    @IBOutlet var visualInspectionButton: UIButton!
 
     var result: VerifaiResult?
     var nfcImage: UIImage?
@@ -27,6 +28,11 @@ class ChecksViewController: UIViewController {
             nfcButton.isEnabled = false
             nfcButton.setTitle("NFC scan (not available)", for: .disabled)
         }
+        // Check if we have visual inspection results
+        if result?.frontVisualInspectionZoneResult == nil &&
+            result?.backVisualInspectionZoneResult == nil {
+            visualInspectionButton.isEnabled = false
+        }
     }
     
     // MARK: - Button actions
@@ -37,6 +43,15 @@ class ChecksViewController: UIViewController {
         let destination = storyboard.instantiateViewController(withIdentifier: "documentDetails") as! DocumentDetailsTableViewController
         destination.result = result
         navigationController?.pushViewController(destination, animated: true)
+    }
+    
+    @IBAction func handleShowVisualInspectionResults() {
+        // Initialize the visual inspection VC
+        let visualInspectionVC = VisualInspectionTableViewController()
+        // Set the result objects
+        visualInspectionVC.frontVisualInspectionResult = result?.frontVisualInspectionZoneResult
+        visualInspectionVC.backVisualInspectionResult = result?.backVisualInspectionZoneResult
+        navigationController?.pushViewController(visualInspectionVC, animated: true)
     }
     
     @IBAction func handleShowScanImages() {
@@ -103,12 +118,16 @@ class ChecksViewController: UIViewController {
                 case .failure(let error):
                     print("Error: \(error)")
                 case .success(let livenessResult):
-                    // Show result
-                    self.showAlert(msg: "All checks done?\n\n\(livenessResult.automaticChecksPassed)")
+                    var resultText = "All checks done?\n\n\(livenessResult.automaticChecksPassed)"
                     // Print face matching result if available
                     if let faceMatchResult = livenessResult.resultList.first(where: { $0 is VerifaiFaceMatchingCheckResult }) as? VerifaiFaceMatchingCheckResult {
+                        let confidence = faceMatchResult.confidence ?? 0.01
                         print("Face matches: \(faceMatchResult.matches ?? false)")
+                        resultText += "\n\nFace matches: \(faceMatchResult.matches ?? false)"
+                        resultText += "\n\nFace match: \(Double(confidence * 100).rounded())%"
                     }
+                    // Show result
+                    self.showAlert(msg: resultText)
                 }
             }
         } catch {
