@@ -16,6 +16,7 @@ class MainViewController: UIViewController {
     // MARK: - View lifecycle methods
     
     override func viewDidLoad() {
+        title = ""
         // Make sure we have access to the camera
         if AVCaptureDevice.authorizationStatus(for: .video) != .authorized {
             AVCaptureDevice.requestAccess(for: .video) { _ in }
