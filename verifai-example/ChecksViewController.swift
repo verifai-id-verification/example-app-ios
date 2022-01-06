@@ -15,6 +15,7 @@ import VerifaiLivenessKit
 class ChecksViewController: UIViewController {
     
     @IBOutlet var nfcButton: UIButton!
+    @IBOutlet var visualInspectionButton: UIButton!
 
     var result: VerifaiResult?
     var nfcImage: UIImage?
@@ -27,6 +28,11 @@ class ChecksViewController: UIViewController {
             nfcButton.isEnabled = false
             nfcButton.setTitle("NFC scan (not available)", for: .disabled)
         }
+        // Check if we have visual inspection results
+        if result?.frontVisualInspectionZoneResult == nil &&
+            result?.backVisualInspectionZoneResult == nil {
+            visualInspectionButton.isEnabled = false
+        }
     }
     
     // MARK: - Button actions
@@ -37,6 +43,15 @@ class ChecksViewController: UIViewController {
         let destination = storyboard.instantiateViewController(withIdentifier: "documentDetails") as! DocumentDetailsTableViewController
         destination.result = result
         navigationController?.pushViewController(destination, animated: true)
+    }
+    
+    @IBAction func handleShowVisualInspectionResults() {
+        // Initialize the visual inspection VC
+        let visualInspectionVC = VisualInspectionTableViewController()
+        // Set the result objects
+        visualInspectionVC.frontVisualInspectionResult = result?.frontVisualInspectionZoneResult
+        visualInspectionVC.backVisualInspectionResult = result?.backVisualInspectionZoneResult
+        navigationController?.pushViewController(visualInspectionVC, animated: true)
     }
     
     @IBAction func handleShowScanImages() {
