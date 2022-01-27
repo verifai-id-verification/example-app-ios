@@ -4,6 +4,8 @@
 <dict>
 	<key>CFBundleDevelopmentRegion</key>
 	<string>$(DEVELOPMENT_LANGUAGE)</string>
+	<key>CFBundleDisplayName</key>
+	<string>Verifai example Github</string>
 	<key>CFBundleExecutable</key>
 	<string>$(EXECUTABLE_NAME)</string>
 	<key>CFBundleIdentifier</key>
@@ -26,6 +28,10 @@
 	<string>NFC permission here!</string>
 	<key>NSCameraUsageDescription</key>
 	<string>The use of camera is required to scan the documents.</string>
+	<key>NSMicrophoneUsageDescription</key>
+	<string>Microphone permission text</string>
+	<key>NSSpeechRecognitionUsageDescription</key>
+	<string>Speech recognition permission text</string>
 	<key>UILaunchStoryboardName</key>
 	<string>LaunchScreen</string>
 	<key>UIMainStoryboardFile</key>
@@ -49,10 +55,6 @@
 	</array>
 	<key>UIViewControllerBasedStatusBarAppearance</key>
 	<false/>
-	<key>NSMicrophoneUsageDescription</key>
-	<string>Microphone permission text</string>
-	<key>NSSpeechRecognitionUsageDescription</key>
-	<string>Speech recognition permission text</string>
 	<key>com.apple.developer.nfc.readersession.iso7816.select-identifiers</key>
 	<array>
 		<string>A0000002471001</string>
