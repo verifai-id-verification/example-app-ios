@@ -53,9 +53,9 @@ class MainViewController: UIViewController {
                                                  validators: [])
         do {
             // Instruction screen configuration
-            configuration.instructionScreenConfiguration =
-                try VerifaiInstructionScreenConfiguration(showInstructionScreens: false,
-                                                          instructionScreens: [:])
+//            configuration.instructionScreenConfiguration =
+//                try VerifaiInstructionScreenConfiguration(showInstructionScreens: false,
+//                                                          instructionScreens: [:])
             // Enable visual inspection feature 
             configuration.enableVisualInspection = true
             // Set the configuration in Verifai
