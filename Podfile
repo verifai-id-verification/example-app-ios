@@ -1,10 +1,10 @@
-platform :ios, "11.0"
+platform :ios, "12.0"
 source 'https://github.com/CocoaPods/Specs.git'
 
 use_frameworks!
 
 target 'verifai-example' do
-    pod 'Verifai', '~> 5.2.2'
-    pod 'VerifaiNFC', '~> 5.2.2'
-    pod 'VerifaiLiveness', '~> 5.2.2'
+    pod 'Verifai', '~> 5.3.0'
+    pod 'VerifaiNFC', '~> 5.3.0'
+    pod 'VerifaiLiveness', '~> 5.3.0'
 end

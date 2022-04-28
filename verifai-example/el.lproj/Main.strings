@@ -1,0 +1,69 @@
+
+/* Class = "UILabel"; text = "First name:"; ObjectID = "5VY-pC-kZF"; */
+"5VY-pC-kZF.text" = "First name:";
+
+/* Class = "UITableViewSection"; headerTitle = "MRZ Model"; ObjectID = "8Jy-XQ-4lF"; */
+"8Jy-XQ-4lF.headerTitle" = "MRZ Model";
+
+/* Class = "UILabel"; text = "Sex:"; ObjectID = "DbI-QT-l7G"; */
+"DbI-QT-l7G.text" = "Sex:";
+
+/* Class = "UITableViewSection"; headerTitle = "Basic information"; ObjectID = "EGr-cD-hPM"; */
+"EGr-cD-hPM.headerTitle" = "Basic information";
+
+/* Class = "UILabel"; text = "Date of birth:"; ObjectID = "Ece-2Z-ySe"; */
+"Ece-2Z-ySe.text" = "Date of birth:";
+
+/* Class = "UIButton"; normalTitle = "Show scan images"; ObjectID = "GsZ-FU-ID9"; */
+"GsZ-FU-ID9.normalTitle" = "Show scan images";
+
+/* Class = "UIButton"; normalTitle = "Show scan results"; ObjectID = "IoL-fG-ddg"; */
+"IoL-fG-ddg.normalTitle" = "Show scan results";
+
+/* Class = "UINavigationItem"; title = "Verifai Example"; ObjectID = "Jxl-lm-yGw"; */
+"Jxl-lm-yGw.title" = "Verifai Example";
+
+/* Class = "UILabel"; text = "Document number:"; ObjectID = "Lm7-yO-cJC"; */
+"Lm7-yO-cJC.text" = "Document number:";
+
+/* Class = "UIButton"; normalTitle = "Show Visual Inspection results"; ObjectID = "Qvw-7S-kWY"; */
+"Qvw-7S-kWY.normalTitle" = "Show Visual Inspection results";
+
+/* Class = "UIButton"; normalTitle = "Start scanning"; ObjectID = "VnB-lJ-N0D"; */
+"VnB-lJ-N0D.normalTitle" = "Start scanning";
+
+/* Class = "UILabel"; text = "Nationality"; ObjectID = "XjV-oP-6Mz"; */
+"XjV-oP-6Mz.text" = "Nationality";
+
+/* Class = "UILabel"; text = "You can start scanning right away, Verifai will take care of the rest"; ObjectID = "eTl-l4-SsW"; */
+"eTl-l4-SsW.text" = "You can start scanning right away, Verifai will take care of the rest";
+
+/* Class = "UILabel"; text = "Optional data:"; ObjectID = "fBf-96-NpN"; */
+"fBf-96-NpN.text" = "Optional data:";
+
+/* Class = "UILabel"; text = "Last name:"; ObjectID = "hZr-Kc-78d"; */
+"hZr-Kc-78d.text" = "Last name:";
+
+/* Class = "UIButton"; normalTitle = "Liveness check"; ObjectID = "jvV-lW-kjR"; */
+"jvV-lW-kjR.normalTitle" = "Liveness check";
+
+/* Class = "UILabel"; text = "Expiration date:"; ObjectID = "msc-W1-ygu"; */
+"msc-W1-ygu.text" = "Expiration date:";
+
+/* Class = "UILabel"; text = "Country code:"; ObjectID = "syC-dc-bJw"; */
+"syC-dc-bJw.text" = "Country code:";
+
+/* Class = "UITableViewController"; title = "Document Details"; ObjectID = "wH9-Vh-nid"; */
+"wH9-Vh-nid.title" = "Document Details";
+
+/* Class = "UILabel"; text = "View results or perform other available checks"; ObjectID = "xEB-9n-NsC"; */
+"xEB-9n-NsC.text" = "View results or perform other available checks";
+
+/* Class = "UIButton"; normalTitle = "NFC scan"; ObjectID = "yMj-To-hnz"; */
+"yMj-To-hnz.normalTitle" = "NFC scan";
+
+/* Class = "UILabel"; text = "Detail"; ObjectID = "ytu-6T-Xfd"; */
+"ytu-6T-Xfd.text" = "Detail";
+
+/* Class = "UILabel"; text = "Document type:"; ObjectID = "zJV-m5-esd"; */
+"zJV-m5-esd.text" = "Document type:";
