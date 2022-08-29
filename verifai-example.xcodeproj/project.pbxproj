@@ -32,17 +32,10 @@
 		D1BC28AE20E26380003C29DE /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		D1BC28B120E26380003C29DE /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		D1BC28B320E26380003C29DE /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		E34500E027187B87007D3C73 /* OpenSSL.xcframework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcframework; path = OpenSSL.xcframework; sourceTree = "<group>"; };
 		E3A19FA222F8538E00E8B318 /* licencefile.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; name = licencefile.txt; path = "verifai-example/Resources/licencefile.txt"; sourceTree = SOURCE_ROOT; };
 		E3ABEFCA2523337000E24985 /* ScanImagesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScanImagesViewController.swift; sourceTree = "<group>"; };
 		E3B7B7742330E0B200C07574 /* ChecksViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChecksViewController.swift; sourceTree = "<group>"; };
 		E3B7B7762330FB5800C07574 /* verifai-example.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = "verifai-example.entitlements"; sourceTree = "<group>"; };
-		E3DD8B7F27198BA100CC660E /* VerifaiNFCKit.xcframework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcframework; name = VerifaiNFCKit.xcframework; path = "verifai-example/VerifaiNFCKit.xcframework"; sourceTree = "<group>"; };
-		E3DD8B8027198BA100CC660E /* VerifaiKit.xcframework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcframework; name = VerifaiKit.xcframework; path = "verifai-example/VerifaiKit.xcframework"; sourceTree = "<group>"; };
-		E3DD8B8127198BA100CC660E /* VerifaiLivenessKit.xcframework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcframework; name = VerifaiLivenessKit.xcframework; path = "verifai-example/VerifaiLivenessKit.xcframework"; sourceTree = "<group>"; };
-		E3DD8B8227198BA100CC660E /* VerifaiCommonsKit.xcframework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcframework; name = VerifaiCommonsKit.xcframework; path = "verifai-example/VerifaiCommonsKit.xcframework"; sourceTree = "<group>"; };
-		E3DD8B9E2719B8C000CC660E /* OpenSSL.xcframework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcframework; name = OpenSSL.xcframework; path = "verifai-example/OpenSSL.xcframework"; sourceTree = "<group>"; };
-		E3DD8BAC2719B97300CC660E /* opencv2.xcframework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcframework; name = opencv2.xcframework; path = "verifai-example/opencv2.xcframework"; sourceTree = "<group>"; };
 		E3E0302B2818158D0002E906 /* ar */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ar; path = ar.lproj/Main.strings; sourceTree = "<group>"; };
 		E3E0303B2818158D0002E906 /* ar */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ar; path = ar.lproj/LaunchScreen.strings; sourceTree = "<group>"; };
 		E3E0303C28181D8A0002E906 /* bg */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = bg; path = bg.lproj/Main.strings; sourceTree = "<group>"; };
@@ -161,13 +154,6 @@
 		FF4BC41C6F024C5974B25A9F /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				E3DD8BAC2719B97300CC660E /* opencv2.xcframework */,
-				E3DD8B9E2719B8C000CC660E /* OpenSSL.xcframework */,
-				E3DD8B8227198BA100CC660E /* VerifaiCommonsKit.xcframework */,
-				E3DD8B8027198BA100CC660E /* VerifaiKit.xcframework */,
-				E3DD8B8127198BA100CC660E /* VerifaiLivenessKit.xcframework */,
-				E3DD8B7F27198BA100CC660E /* VerifaiNFCKit.xcframework */,
-				E34500E027187B87007D3C73 /* OpenSSL.xcframework */,
 				78E25FAB8A7DD768A50F0E56 /* Pods_verifai_example.framework */,
 			);
 			name = Frameworks;
