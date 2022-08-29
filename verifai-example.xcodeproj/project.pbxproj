@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 52;
+	objectVersion = 50;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -14,115 +14,11 @@
 		D1BC28AD20E2637F003C29DE /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D1BC28AB20E2637F003C29DE /* Main.storyboard */; };
 		D1BC28AF20E26380003C29DE /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D1BC28AE20E26380003C29DE /* Assets.xcassets */; };
 		D1BC28B220E26380003C29DE /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D1BC28B020E26380003C29DE /* LaunchScreen.storyboard */; };
-		E340B0A127E8B987008B3FF8 /* VerifaiCommonsKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E340B08A27E8B96B008B3FF8 /* VerifaiCommonsKit.framework */; };
-		E340B0A227E8B987008B3FF8 /* VerifaiCommonsKit.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = E340B08A27E8B96B008B3FF8 /* VerifaiCommonsKit.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
-		E340B0A327E8B987008B3FF8 /* VerifaiKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E340B08827E8B96B008B3FF8 /* VerifaiKit.framework */; };
-		E340B0A427E8B987008B3FF8 /* VerifaiKit.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = E340B08827E8B96B008B3FF8 /* VerifaiKit.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
-		E340B0A527E8B988008B3FF8 /* VerifaiLivenessKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E340B08E27E8B96B008B3FF8 /* VerifaiLivenessKit.framework */; };
-		E340B0A627E8B988008B3FF8 /* VerifaiLivenessKit.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = E340B08E27E8B96B008B3FF8 /* VerifaiLivenessKit.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
-		E340B0A727E8B988008B3FF8 /* VerifaiNFCKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E340B08C27E8B96B008B3FF8 /* VerifaiNFCKit.framework */; };
-		E340B0A827E8B988008B3FF8 /* VerifaiNFCKit.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = E340B08C27E8B96B008B3FF8 /* VerifaiNFCKit.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
-		E340B0AD27E8BB17008B3FF8 /* OpenSSL.xcframework in Frameworks */ = {isa = PBXBuildFile; fileRef = E34500E027187B87007D3C73 /* OpenSSL.xcframework */; };
-		E340B0AE27E8BB17008B3FF8 /* OpenSSL.xcframework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = E34500E027187B87007D3C73 /* OpenSSL.xcframework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		E3A19FA322F8538E00E8B318 /* licencefile.txt in Resources */ = {isa = PBXBuildFile; fileRef = E3A19FA222F8538E00E8B318 /* licencefile.txt */; };
 		E3ABEFCB2523337000E24985 /* ScanImagesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E3ABEFCA2523337000E24985 /* ScanImagesViewController.swift */; };
 		E3B7B7782331178600C07574 /* ChecksViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E3B7B7742330E0B200C07574 /* ChecksViewController.swift */; };
 		E3EA13EE27870AD9005408AB /* VisualInspectionTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E3EA13ED27870AD9005408AB /* VisualInspectionTableViewController.swift */; };
 /* End PBXBuildFile section */
-
-/* Begin PBXContainerItemProxy section */
-		E340B08727E8B96B008B3FF8 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = E340B07527E8B96B008B3FF8 /* Verifai.xcodeproj */;
-			proxyType = 2;
-			remoteGlobalIDString = 792F70F31DB75A4F009F1C04;
-			remoteInfo = VerifaiKit;
-		};
-		E340B08927E8B96B008B3FF8 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = E340B07527E8B96B008B3FF8 /* Verifai.xcodeproj */;
-			proxyType = 2;
-			remoteGlobalIDString = D1FF7AEB2277213F009C1154;
-			remoteInfo = VerifaiCommonsKit;
-		};
-		E340B08B27E8B96B008B3FF8 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = E340B07527E8B96B008B3FF8 /* Verifai.xcodeproj */;
-			proxyType = 2;
-			remoteGlobalIDString = D1148F4F2285B30300F99C56;
-			remoteInfo = VerifaiNFCKit;
-		};
-		E340B08D27E8B96B008B3FF8 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = E340B07527E8B96B008B3FF8 /* Verifai.xcodeproj */;
-			proxyType = 2;
-			remoteGlobalIDString = D1FF7AD2227717E7009C1154;
-			remoteInfo = VerifaiLivenessKit;
-		};
-		E340B08F27E8B96B008B3FF8 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = E340B07527E8B96B008B3FF8 /* Verifai.xcodeproj */;
-			proxyType = 2;
-			remoteGlobalIDString = E35BDA2A2304413400FC9FF2;
-			remoteInfo = VerifaiManualDataCrosscheck;
-		};
-		E340B09127E8B96B008B3FF8 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = E340B07527E8B96B008B3FF8 /* Verifai.xcodeproj */;
-			proxyType = 2;
-			remoteGlobalIDString = E3F8602D230BDBD70095E8F0;
-			remoteInfo = VerifaiManualSecurityFeatureCheck;
-		};
-		E340B09327E8B96B008B3FF8 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = E340B07527E8B96B008B3FF8 /* Verifai.xcodeproj */;
-			proxyType = 2;
-			remoteGlobalIDString = D13D09D0212BFCE9001D1970;
-			remoteInfo = VerifaiOpenSSL;
-		};
-		E340B09527E8B96B008B3FF8 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = E340B07527E8B96B008B3FF8 /* Verifai.xcodeproj */;
-			proxyType = 2;
-			remoteGlobalIDString = D154D8332230149800581568;
-			remoteInfo = VerifaiMRZSegmentation;
-		};
-		E340B09727E8B96B008B3FF8 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = E340B07527E8B96B008B3FF8 /* Verifai.xcodeproj */;
-			proxyType = 2;
-			remoteGlobalIDString = D1F1C33E22427CCC00206923;
-			remoteInfo = VerifaiCardSegmentation;
-		};
-		E340B09927E8B96B008B3FF8 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = E340B07527E8B96B008B3FF8 /* Verifai.xcodeproj */;
-			proxyType = 2;
-			remoteGlobalIDString = D1090179229D55BE0070BB43;
-			remoteInfo = VerifaiNFCTests;
-		};
-		E340B09B27E8B96B008B3FF8 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = E340B07527E8B96B008B3FF8 /* Verifai.xcodeproj */;
-			proxyType = 2;
-			remoteGlobalIDString = E31E999B23BF906100EF2DA7;
-			remoteInfo = VerifaiTests;
-		};
-		E340B09D27E8B96B008B3FF8 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = E340B07527E8B96B008B3FF8 /* Verifai.xcodeproj */;
-			proxyType = 2;
-			remoteGlobalIDString = E3DE675D25681A03004213C8;
-			remoteInfo = VerifaiAllTests;
-		};
-		E340B09F27E8B96B008B3FF8 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = E340B07527E8B96B008B3FF8 /* Verifai.xcodeproj */;
-			proxyType = 2;
-			remoteGlobalIDString = E3EF6F1626FC7C4900E3B33C;
-			remoteInfo = VerifaiProcessingHubTests;
-		};
-/* End PBXContainerItemProxy section */
 
 /* Begin PBXCopyFilesBuildPhase section */
 		E340B0A927E8B988008B3FF8 /* Embed Frameworks */ = {
@@ -131,11 +27,6 @@
 			dstPath = "";
 			dstSubfolderSpec = 10;
 			files = (
-				E340B0AE27E8BB17008B3FF8 /* OpenSSL.xcframework in Embed Frameworks */,
-				E340B0A827E8B988008B3FF8 /* VerifaiNFCKit.framework in Embed Frameworks */,
-				E340B0A427E8B987008B3FF8 /* VerifaiKit.framework in Embed Frameworks */,
-				E340B0A227E8B987008B3FF8 /* VerifaiCommonsKit.framework in Embed Frameworks */,
-				E340B0A627E8B988008B3FF8 /* VerifaiLivenessKit.framework in Embed Frameworks */,
 			);
 			name = "Embed Frameworks";
 			runOnlyForDeploymentPostprocessing = 0;
@@ -154,18 +45,10 @@
 		D1BC28AE20E26380003C29DE /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		D1BC28B120E26380003C29DE /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		D1BC28B320E26380003C29DE /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		E340B07527E8B96B008B3FF8 /* Verifai.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = Verifai.xcodeproj; path = "../verifai-framework/Verifai.xcodeproj"; sourceTree = "<group>"; };
-		E34500E027187B87007D3C73 /* OpenSSL.xcframework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcframework; path = OpenSSL.xcframework; sourceTree = "<group>"; };
 		E3A19FA222F8538E00E8B318 /* licencefile.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; name = licencefile.txt; path = "verifai-example/Resources/licencefile.txt"; sourceTree = SOURCE_ROOT; };
 		E3ABEFCA2523337000E24985 /* ScanImagesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScanImagesViewController.swift; sourceTree = "<group>"; };
 		E3B7B7742330E0B200C07574 /* ChecksViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChecksViewController.swift; sourceTree = "<group>"; };
 		E3B7B7762330FB5800C07574 /* verifai-example.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = "verifai-example.entitlements"; sourceTree = "<group>"; };
-		E3DD8B7F27198BA100CC660E /* VerifaiNFCKit.xcframework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcframework; name = VerifaiNFCKit.xcframework; path = "verifai-example/VerifaiNFCKit.xcframework"; sourceTree = "<group>"; };
-		E3DD8B8027198BA100CC660E /* VerifaiKit.xcframework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcframework; name = VerifaiKit.xcframework; path = "verifai-example/VerifaiKit.xcframework"; sourceTree = "<group>"; };
-		E3DD8B8127198BA100CC660E /* VerifaiLivenessKit.xcframework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcframework; name = VerifaiLivenessKit.xcframework; path = "verifai-example/VerifaiLivenessKit.xcframework"; sourceTree = "<group>"; };
-		E3DD8B8227198BA100CC660E /* VerifaiCommonsKit.xcframework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcframework; name = VerifaiCommonsKit.xcframework; path = "verifai-example/VerifaiCommonsKit.xcframework"; sourceTree = "<group>"; };
-		E3DD8B9E2719B8C000CC660E /* OpenSSL.xcframework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcframework; name = OpenSSL.xcframework; path = "verifai-example/OpenSSL.xcframework"; sourceTree = "<group>"; };
-		E3DD8BAC2719B97300CC660E /* opencv2.xcframework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcframework; name = opencv2.xcframework; path = "verifai-example/opencv2.xcframework"; sourceTree = "<group>"; };
 		E3E0302B2818158D0002E906 /* ar */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ar; path = ar.lproj/Main.strings; sourceTree = "<group>"; };
 		E3E0303B2818158D0002E906 /* ar */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ar; path = ar.lproj/LaunchScreen.strings; sourceTree = "<group>"; };
 		E3E0303C28181D8A0002E906 /* bg */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = bg; path = bg.lproj/Main.strings; sourceTree = "<group>"; };
@@ -220,12 +103,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				E340B0AD27E8BB17008B3FF8 /* OpenSSL.xcframework in Frameworks */,
 				93AFD2A597FB5EFC150BBB91 /* Pods_verifai_example.framework in Frameworks */,
-				E340B0A327E8B987008B3FF8 /* VerifaiKit.framework in Frameworks */,
-				E340B0A127E8B987008B3FF8 /* VerifaiCommonsKit.framework in Frameworks */,
-				E340B0A527E8B988008B3FF8 /* VerifaiLivenessKit.framework in Frameworks */,
-				E340B0A727E8B988008B3FF8 /* VerifaiNFCKit.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -244,7 +122,6 @@
 		D1BC289B20E2637F003C29DE = {
 			isa = PBXGroup;
 			children = (
-				E340B07527E8B96B008B3FF8 /* Verifai.xcodeproj */,
 				D1BC28A620E2637F003C29DE /* verifai-example */,
 				D1BC28A520E2637F003C29DE /* Products */,
 				6E9A4F9D97F6B47416443A62 /* Pods */,
@@ -287,36 +164,9 @@
 			path = Resources;
 			sourceTree = "<group>";
 		};
-		E340B07627E8B96B008B3FF8 /* Products */ = {
-			isa = PBXGroup;
-			children = (
-				E340B08827E8B96B008B3FF8 /* VerifaiKit.framework */,
-				E340B08A27E8B96B008B3FF8 /* VerifaiCommonsKit.framework */,
-				E340B08C27E8B96B008B3FF8 /* VerifaiNFCKit.framework */,
-				E340B08E27E8B96B008B3FF8 /* VerifaiLivenessKit.framework */,
-				E340B09027E8B96B008B3FF8 /* VerifaiManualDataCrosscheck.framework */,
-				E340B09227E8B96B008B3FF8 /* VerifaiManualSecurityFeatureCheck.framework */,
-				E340B09427E8B96B008B3FF8 /* libVerifaiOpenSSL.a */,
-				E340B09627E8B96B008B3FF8 /* libVerifaiMRZSegmentation.a */,
-				E340B09827E8B96B008B3FF8 /* libVerifaiCardSegmentation.a */,
-				E340B09A27E8B96B008B3FF8 /* VerifaiNFCTests.xctest */,
-				E340B09C27E8B96B008B3FF8 /* VerifaiTests.xctest */,
-				E340B09E27E8B96B008B3FF8 /* VerifaiAllTests.xctest */,
-				E340B0A027E8B96B008B3FF8 /* VerifaiProcessingHubTests.xctest */,
-			);
-			name = Products;
-			sourceTree = "<group>";
-		};
 		FF4BC41C6F024C5974B25A9F /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				E3DD8BAC2719B97300CC660E /* opencv2.xcframework */,
-				E3DD8B9E2719B8C000CC660E /* OpenSSL.xcframework */,
-				E3DD8B8227198BA100CC660E /* VerifaiCommonsKit.xcframework */,
-				E3DD8B8027198BA100CC660E /* VerifaiKit.xcframework */,
-				E3DD8B8127198BA100CC660E /* VerifaiLivenessKit.xcframework */,
-				E3DD8B7F27198BA100CC660E /* VerifaiNFCKit.xcframework */,
-				E34500E027187B87007D3C73 /* OpenSSL.xcframework */,
 				78E25FAB8A7DD768A50F0E56 /* Pods_verifai_example.framework */,
 			);
 			name = Frameworks;
@@ -334,6 +184,7 @@
 				D1BC28A120E2637F003C29DE /* Frameworks */,
 				D1BC28A220E2637F003C29DE /* Resources */,
 				E340B0A927E8B988008B3FF8 /* Embed Frameworks */,
+				2BECC4BCFDC71D1455A93BCB /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -394,112 +245,12 @@
 			mainGroup = D1BC289B20E2637F003C29DE;
 			productRefGroup = D1BC28A520E2637F003C29DE /* Products */;
 			projectDirPath = "";
-			projectReferences = (
-				{
-					ProductGroup = E340B07627E8B96B008B3FF8 /* Products */;
-					ProjectRef = E340B07527E8B96B008B3FF8 /* Verifai.xcodeproj */;
-				},
-			);
 			projectRoot = "";
 			targets = (
 				D1BC28A320E2637F003C29DE /* verifai-example */,
 			);
 		};
 /* End PBXProject section */
-
-/* Begin PBXReferenceProxy section */
-		E340B08827E8B96B008B3FF8 /* VerifaiKit.framework */ = {
-			isa = PBXReferenceProxy;
-			fileType = wrapper.framework;
-			path = VerifaiKit.framework;
-			remoteRef = E340B08727E8B96B008B3FF8 /* PBXContainerItemProxy */;
-			sourceTree = BUILT_PRODUCTS_DIR;
-		};
-		E340B08A27E8B96B008B3FF8 /* VerifaiCommonsKit.framework */ = {
-			isa = PBXReferenceProxy;
-			fileType = wrapper.framework;
-			path = VerifaiCommonsKit.framework;
-			remoteRef = E340B08927E8B96B008B3FF8 /* PBXContainerItemProxy */;
-			sourceTree = BUILT_PRODUCTS_DIR;
-		};
-		E340B08C27E8B96B008B3FF8 /* VerifaiNFCKit.framework */ = {
-			isa = PBXReferenceProxy;
-			fileType = wrapper.framework;
-			path = VerifaiNFCKit.framework;
-			remoteRef = E340B08B27E8B96B008B3FF8 /* PBXContainerItemProxy */;
-			sourceTree = BUILT_PRODUCTS_DIR;
-		};
-		E340B08E27E8B96B008B3FF8 /* VerifaiLivenessKit.framework */ = {
-			isa = PBXReferenceProxy;
-			fileType = wrapper.framework;
-			path = VerifaiLivenessKit.framework;
-			remoteRef = E340B08D27E8B96B008B3FF8 /* PBXContainerItemProxy */;
-			sourceTree = BUILT_PRODUCTS_DIR;
-		};
-		E340B09027E8B96B008B3FF8 /* VerifaiManualDataCrosscheck.framework */ = {
-			isa = PBXReferenceProxy;
-			fileType = wrapper.framework;
-			path = VerifaiManualDataCrosscheck.framework;
-			remoteRef = E340B08F27E8B96B008B3FF8 /* PBXContainerItemProxy */;
-			sourceTree = BUILT_PRODUCTS_DIR;
-		};
-		E340B09227E8B96B008B3FF8 /* VerifaiManualSecurityFeatureCheck.framework */ = {
-			isa = PBXReferenceProxy;
-			fileType = wrapper.framework;
-			path = VerifaiManualSecurityFeatureCheck.framework;
-			remoteRef = E340B09127E8B96B008B3FF8 /* PBXContainerItemProxy */;
-			sourceTree = BUILT_PRODUCTS_DIR;
-		};
-		E340B09427E8B96B008B3FF8 /* libVerifaiOpenSSL.a */ = {
-			isa = PBXReferenceProxy;
-			fileType = archive.ar;
-			path = libVerifaiOpenSSL.a;
-			remoteRef = E340B09327E8B96B008B3FF8 /* PBXContainerItemProxy */;
-			sourceTree = BUILT_PRODUCTS_DIR;
-		};
-		E340B09627E8B96B008B3FF8 /* libVerifaiMRZSegmentation.a */ = {
-			isa = PBXReferenceProxy;
-			fileType = archive.ar;
-			path = libVerifaiMRZSegmentation.a;
-			remoteRef = E340B09527E8B96B008B3FF8 /* PBXContainerItemProxy */;
-			sourceTree = BUILT_PRODUCTS_DIR;
-		};
-		E340B09827E8B96B008B3FF8 /* libVerifaiCardSegmentation.a */ = {
-			isa = PBXReferenceProxy;
-			fileType = archive.ar;
-			path = libVerifaiCardSegmentation.a;
-			remoteRef = E340B09727E8B96B008B3FF8 /* PBXContainerItemProxy */;
-			sourceTree = BUILT_PRODUCTS_DIR;
-		};
-		E340B09A27E8B96B008B3FF8 /* VerifaiNFCTests.xctest */ = {
-			isa = PBXReferenceProxy;
-			fileType = wrapper.cfbundle;
-			path = VerifaiNFCTests.xctest;
-			remoteRef = E340B09927E8B96B008B3FF8 /* PBXContainerItemProxy */;
-			sourceTree = BUILT_PRODUCTS_DIR;
-		};
-		E340B09C27E8B96B008B3FF8 /* VerifaiTests.xctest */ = {
-			isa = PBXReferenceProxy;
-			fileType = wrapper.cfbundle;
-			path = VerifaiTests.xctest;
-			remoteRef = E340B09B27E8B96B008B3FF8 /* PBXContainerItemProxy */;
-			sourceTree = BUILT_PRODUCTS_DIR;
-		};
-		E340B09E27E8B96B008B3FF8 /* VerifaiAllTests.xctest */ = {
-			isa = PBXReferenceProxy;
-			fileType = wrapper.cfbundle;
-			path = VerifaiAllTests.xctest;
-			remoteRef = E340B09D27E8B96B008B3FF8 /* PBXContainerItemProxy */;
-			sourceTree = BUILT_PRODUCTS_DIR;
-		};
-		E340B0A027E8B96B008B3FF8 /* VerifaiProcessingHubTests.xctest */ = {
-			isa = PBXReferenceProxy;
-			fileType = wrapper.cfbundle;
-			path = VerifaiProcessingHubTests.xctest;
-			remoteRef = E340B09F27E8B96B008B3FF8 /* PBXContainerItemProxy */;
-			sourceTree = BUILT_PRODUCTS_DIR;
-		};
-/* End PBXReferenceProxy section */
 
 /* Begin PBXResourcesBuildPhase section */
 		D1BC28A220E2637F003C29DE /* Resources */ = {
@@ -516,6 +267,23 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
+		2BECC4BCFDC71D1455A93BCB /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-verifai-example/Pods-verifai-example-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-verifai-example/Pods-verifai-example-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-verifai-example/Pods-verifai-example-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
 		DFF0BF168D76FAB0B06085F2 /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
