@@ -32,6 +32,7 @@
 		D1BC28AE20E26380003C29DE /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		D1BC28B120E26380003C29DE /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		D1BC28B320E26380003C29DE /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		E38E336928CA39700017F106 /* VerifaiOpenSSL.xcframework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcframework; name = VerifaiOpenSSL.xcframework; path = "../verifai-framework/VerifaiOpenSSL/VerifaiOpenSSL.xcframework"; sourceTree = "<group>"; };
 		E3A19FA222F8538E00E8B318 /* licencefile.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; name = licencefile.txt; path = "verifai-example/Resources/licencefile.txt"; sourceTree = SOURCE_ROOT; };
 		E3ABEFCA2523337000E24985 /* ScanImagesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScanImagesViewController.swift; sourceTree = "<group>"; };
 		E3B7B7742330E0B200C07574 /* ChecksViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChecksViewController.swift; sourceTree = "<group>"; };
@@ -154,6 +155,7 @@
 		FF4BC41C6F024C5974B25A9F /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				E38E336928CA39700017F106 /* VerifaiOpenSSL.xcframework */,
 				78E25FAB8A7DD768A50F0E56 /* Pods_verifai_example.framework */,
 			);
 			name = Frameworks;
@@ -170,7 +172,7 @@
 				D1BC28A020E2637F003C29DE /* Sources */,
 				D1BC28A120E2637F003C29DE /* Frameworks */,
 				D1BC28A220E2637F003C29DE /* Resources */,
-				0743051515295A3525E286E9 /* [CP] Embed Pods Frameworks */,
+				0DB760C012C3FF3D91976716 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -253,7 +255,7 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
-		0743051515295A3525E286E9 /* [CP] Embed Pods Frameworks */ = {
+		0DB760C012C3FF3D91976716 /* [CP] Embed Pods Frameworks */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -505,7 +507,7 @@
 				DEVELOPMENT_ASSET_PATHS = "";
 				DEVELOPMENT_TEAM = 799N9ZYHX3;
 				INFOPLIST_FILE = "verifai-example/Info.plist";
-				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -529,7 +531,7 @@
 				DEVELOPMENT_ASSET_PATHS = "";
 				DEVELOPMENT_TEAM = 799N9ZYHX3;
 				INFOPLIST_FILE = "verifai-example/Info.plist";
-				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",

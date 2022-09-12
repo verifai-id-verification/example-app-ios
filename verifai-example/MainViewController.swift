@@ -37,10 +37,10 @@ class MainViewController: UIViewController {
         // Start configuring Verifai
         // Setup the licence
         switch VerifaiCommons.setLicence(licenceString) {
-            case .success(_):
-                print("Successfully configured Verifai")
-            case .failure(let error):
-                print("🚫 Licence error: \(error)")
+        case .success(_):
+            print("Successfully configured Verifai")
+        case .failure(let error):
+            print("🚫 Licence error: \(error)")
         }
         // You can customise configuration items like this
         let configuration = VerifaiConfiguration(requireDocumentCopy: true,
@@ -54,9 +54,9 @@ class MainViewController: UIViewController {
         do {
             // Instruction screen configuration
             configuration.instructionScreenConfiguration =
-                try VerifaiInstructionScreenConfiguration(showInstructionScreens: true,
-                                                          instructionScreens: [:])
-            // Enable visual inspection feature 
+            try VerifaiInstructionScreenConfiguration(showInstructionScreens: true,
+                                                      instructionScreens: [:])
+            // Enable visual inspection feature
             configuration.enableVisualInspection = true
             // Set the configuration in Verifai
             try Verifai.configure(with: configuration)
@@ -69,8 +69,8 @@ class MainViewController: UIViewController {
     
     // MARK: - Verifai interaction
     
-    /// Starts Verifai
-    func showVerifaiController() {
+    /// The not concurrency aware or pre iOS 13 way of starting the Verifai SDK
+    func startVerifaiCoreScanBlock() {
         // Create a new ScanViewController and provide a block that presents the given viewController
         do {
             try Verifai.start(over: self) { result in
@@ -85,16 +85,38 @@ class MainViewController: UIViewController {
                         self.navigationController?.pushViewController(destination, animated: true)
                     }
                 }
+            }}
+        catch {
+            print("🚫 Error or cancellation: \(error)")
+        }
+    }
+    
+    /// Starts Verifai, this way of starting the Verifai SDK is supported starting on iOS 13
+    @MainActor
+    func startVerifaiCoreScan() async {
+        // Create a new ScanViewController and provide a block that presents the given viewController
+        do {
+            let result = try await Verifai.start(over: self)
+            // Show the available checks on this device
+            let storyboard = UIStoryboard(name: "Main", bundle: Bundle.main)
+            if let destination = storyboard.instantiateViewController(withIdentifier: "checksOverview") as? ChecksViewController {
+                destination.result = result
+                self.navigationController?.pushViewController(destination, animated: true)
             }
         } catch {
-            print("🚫 Unhandled error: \(error)")
+            print("🚫 Error or cancellation: \(error)")
         }
     }
     
     // MARK: - Button handlers
     
     @IBAction func handleAutomaticScan(_ sender: UIButton) {
-        showVerifaiController()
+        // For this example we're using the concurrency aware Verifai starter
+        Task { @MainActor in
+            await startVerifaiCoreScan()
+        }
+        // If you want to use the non concurrency aware way of starting the SDK you can call
+        //startVerifaiCoreScanBlock()
     }
 }
 
