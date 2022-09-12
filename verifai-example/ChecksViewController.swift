@@ -16,7 +16,7 @@ class ChecksViewController: UIViewController {
     
     @IBOutlet var nfcButton: UIButton!
     @IBOutlet var visualInspectionButton: UIButton!
-
+    
     var result: VerifaiResult?
     var nfcImage: UIImage?
     
@@ -67,25 +67,12 @@ class ChecksViewController: UIViewController {
         guard let result = result else {
             return
         }
-        // Start the NFC component
-        do {
-            try VerifaiNFC.start(over: self,
-                                 documentData: result,
-                                 retrieveImage: true,
-                                 instructionScreenConfiguration: nil) { nfcScanResult in
-                switch nfcScanResult {
-                case .failure(let error):
-                    print("Error: \(error)")
-                case .success(let nfcResult):
-                    // Set the image if retrieved
-                    self.nfcImage = nfcResult.photo
-                    // Show some data with an alert
-                    self.showAlert(msg: "Authenticity: \(nfcResult.authenticity) \nOriginality: \(nfcResult.originality) \nConfidentiality: \(nfcResult.confidentiality)")
-                }
-            }
-        } catch {
-            print("🚫 Unhandled error: \(error)")
+        // Start the concurrency aware NFC scan
+        Task { @MainActor in
+            await startNFCScan(result:result)
         }
+        // If you want to use the non concurrency aware way of starting the NFC scan you can call
+        //startNFCBlock(result: result)
     }
     
     @IBAction func handleLivenessCheckButton() {
@@ -110,6 +97,73 @@ class ChecksViewController: UIViewController {
             // Add the face matching check
             let faceMatchingCheck = VerifaiFaceMatchingLivenessCheck(documentImage: documentImage)
             requirements.append(faceMatchingCheck)
+            // Start a liveness check using the concurrency aware method
+            Task { @MainActor in
+                await startLivenessCheck(requirements: requirements,
+                                         outputDirectory: outputDirectory)
+            }
+            // If you don't want to use concurrency aware methods then you can use the method below
+            // Start the liveness check from a non concurrency aware context
+            // startLivenessBlock(requirements: requirements, outputDirectory: outputDirectory)
+        } catch {
+            print("🚫 Error or cancellation: \(error)")
+        }
+    }
+    
+    // MARK: - NFC Starter functions
+    
+    /// Start the NFC scan in a non concurrency aware context
+    /// - Parameter result: The result from the regular scan
+    private func startNFCBlock(result: VerifaiResult) {
+        // Start the NFC component
+        do {
+            try VerifaiNFC.start(over: self,
+                                 documentData: result,
+                                 retrieveImage: true,
+                                 instructionScreenConfiguration: nil) { nfcScanResult in
+                switch nfcScanResult {
+                case .failure(let error):
+                    print("Error: \(error)")
+                case .success(let nfcResult):
+                    // Set the image if retrieved
+                    self.nfcImage = nfcResult.photo
+                    // Show some data with an alert
+                    self.showAlert(msg: "Authenticity: \(nfcResult.authenticity) \nOriginality: \(nfcResult.originality) \nConfidentiality: \(nfcResult.confidentiality)")
+                }
+            }
+        } catch {
+            print("🚫 Unhandled error: \(error)")
+        }
+    }
+    
+    /// Start the NFC scan through the concurrency aware start function
+    /// - Parameter result: The result from the Core Verifai scan
+    @available(iOS 13.0, *)
+    @MainActor
+    private func startNFCScan(result: VerifaiResult) async {
+        // Start the NFC component
+        do {
+            let nfcResult = try await VerifaiNFC.start(over: self,
+                                                       documentData: result,
+                                                       retrieveImage: true)
+            // Set the image if retrieved
+            self.nfcImage = nfcResult.photo
+            // Show some data with an alert
+            self.showAlert(msg: "Authenticity: \(nfcResult.authenticity) \nOriginality: \(nfcResult.originality) \nConfidentiality: \(nfcResult.confidentiality)")
+        } catch {
+            print("🚫 Error or cancellation: \(error)")
+        }
+    }
+    
+    // MARK: - Liveness check starter functions
+    
+    /// Start the liveness check from a non concurrency aware context
+    /// - Parameters:
+    ///   - requirements: The requirements for the liveness check
+    ///   - outputDirectory: The directory in which the video files of the liveness check are stored
+    private func startLivenessBlock(requirements: [VerifaiLivenessCheck],
+                                    outputDirectory: URL) {
+        do {
             // Start the liveness check
             try VerifaiLiveness.start(over: self,
                                       requirements: requirements,
@@ -135,6 +189,35 @@ class ChecksViewController: UIViewController {
         }
     }
     
+    /// Start the Liveness check from a concurrency aware context
+    /// - Parameters:
+    ///   - requirements: The requirements for the liveness check
+    ///   - outputDirectory: The directory in which the video files of the liveness check are stored
+    @available(iOS 13.0, *)
+    @MainActor
+    private func startLivenessCheck(requirements: [VerifaiLivenessCheck],
+                                    outputDirectory: URL) async {
+        do {
+            // Start the liveness check
+            let livenessResult = try await VerifaiLiveness.start(over: self,
+                                                                 requirements: requirements,
+                                                                 resultOutputDirectory: outputDirectory)
+            var resultText = "All checks done?\n\n\(livenessResult.automaticChecksPassed)"
+            // Print face matching result if available
+            if let faceMatchResult = livenessResult.resultList.first(where: { $0 is VerifaiFaceMatchingCheckResult }) as? VerifaiFaceMatchingCheckResult {
+                let confidence = faceMatchResult.confidence ?? 0.01
+                print("Face matches: \(faceMatchResult.matches ?? false)")
+                resultText += "\n\nFace matches: \(faceMatchResult.matches ?? false)"
+                resultText += "\n\nFace match: \(Double(confidence * 100).rounded())%"
+            }
+            // Show result
+            self.showAlert(msg: resultText)
+        } catch {
+            print("🚫 Error or cancelled: \(error)")
+        }
+    }
+    
+    // MARK: - Alert message shower
     /// Show an alert message with a response
     /// - Parameter msg: The message to show inside of the alert message
     private func showAlert(msg: String) {
